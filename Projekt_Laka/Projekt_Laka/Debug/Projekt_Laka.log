@@ -1,0 +1,13 @@
+﻿  main.cpp
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\main.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\main.cpp(17): warning C4101: 'price': unreferenced local variable
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\main.cpp(17): warning C4101: 'length': unreferenced local variable
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\main.cpp(17): warning C4101: 'date': unreferenced local variable
+  Zwierze.cpp
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\zwierze.cpp(7): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\zwierze.cpp(21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Laka.cpp
+  Generating Code...
+c:\users\cezary\documents\visual studio 2015\projects\projekt_laka\projekt_laka\laka.cpp(44): warning C4715: 'Laka::CreatePop': not all control paths return a value
+  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Visual Studio 2015\Projects\Projekt_Laka\Debug\Projekt_Laka.exe
+  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Visual Studio 2015\Projects\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)
