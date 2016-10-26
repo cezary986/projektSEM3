@@ -8,11 +8,18 @@
 class Populacja
 {
 protected:
-	vector <Zwierze*> animals;
+	vector <Zwierze*> males;
+	vector <Zwierze*> females;
 
+	//Wektory z ktorych bede losowal pary do rozmnazania 
+	vector <Zwierze*> malesToBreed;
+	vector <Zwierze*> femalesToBreed;
+
+	vector <Pair*> pairs;//vector na wylosowane do rozmnazania sie pary
 public:
-	void breed();
-
+	void breed(vector <Pair*>);
+	void survive(int);
+	void randomPairs(int);
 };
 
 #endif // POPULACJA_H_INCLUDED

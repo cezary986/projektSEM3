@@ -34,6 +34,7 @@ bool Laka::CreatePop(ifstream sfile, string filename)
 				CIALO 
 			*/
 		}
+		return 1;
 	}
 	else
 	{
