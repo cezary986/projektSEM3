@@ -6,13 +6,12 @@
 #include <ctime>
 #include <cstdlib>
 
-using namespace std;
-
 //enum na plec zwierzat
 enum GENDER { MALE, FEMALE };
 
 class Zwierze
 {
+	friend class Populacja;
 protected:
 	vector <int> chromosome;
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto

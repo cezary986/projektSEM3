@@ -17,7 +17,7 @@ protected:
 
 	vector <Pair*> pairs;//vector na wylosowane do rozmnazania sie pary
 public:
-	void breed(vector <Pair*>);
+	void breed(vector <Pair*>, int);
 	void survive(int);
 	void randomPairs(int);
 };

@@ -7,14 +7,32 @@
 
 using namespace std;
 
-void Populacja::breed(vector <Pair*> pairs)
+void Populacja::breed(vector <Pair*> pairs, int k)
 {
-	for (auto i : this->pairs)
+//ROZMNAZANIE
+	Zwierze * cub;//wskaznik na nowo narodzone zwierze
+	for (auto i : this->pairs)//pelta dla kazdego elementu vectora
 	{
-		
+		cub = (*i->female) + (*i->male);//tworze nowe zwierze na podstawie chromosomow rodzicow
+		if (cub->sex == MALE)
+		{
+			this->males.push_back(cub);
+		}
+		else
+		{
+			this->females.push_back(cub);
+		}
+	}
+//LOSOWANIE K PAR NA NASTEPNE ROZMNAZANIE
+	int index;
+	for (int i = 0; i < k; i++)
+	{
+		//index = rand()% this->
 	}
 	//this->pairs.clear();  usuwa caly wektor niszczy wszystkie obiektyr!!!
 }
+
+//G
 void Populacja::survive(int w)
 {	
 	//sprawdzam dla samic

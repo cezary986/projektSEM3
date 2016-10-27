@@ -50,5 +50,6 @@ Zwierze * Zwierze::operator +(Zwierze const & ex)
 			cub->chromosome.push_back(this->chromosome[i]);
 		}
 	}
+	cub->sex = GENDER(rand() % 1);//losujemy plec
 	return cub;
 }
