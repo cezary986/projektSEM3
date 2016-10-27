@@ -14,8 +14,8 @@ enum GENDER { MALE, FEMALE };
 class Zwierze
 {
 protected:
-	vector <int> chromosom;
-	int chromSize = size(chromosom);//zeby nie wywolywac za czesto
+	vector <int> chromosome;
+	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 	int breedFreq;//czestotliwosc rozmnazania sie w miesiacach
 	float momsPart;//ile chromosomu bierze od matki
 	float dadsPart;
@@ -23,7 +23,7 @@ protected:
 public:
 	bool checkSurvival(int w);
 	bool checkBreeding(int r);
-	Zwierze operator + (Zwierze const&);
+	Zwierze* operator + (Zwierze const&);
 };
 
 //stuktura sluzaca do przechowywania pary zwierzat przeznaczonej do rozmanazania

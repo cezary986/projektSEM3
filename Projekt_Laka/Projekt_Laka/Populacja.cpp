@@ -11,8 +11,9 @@ void Populacja::breed(vector <Pair*> pairs)
 {
 	for (auto i : this->pairs)
 	{
-		i->female)
+		
 	}
+	//this->pairs.clear();  usuwa caly wektor niszczy wszystkie obiektyr!!!
 }
 void Populacja::survive(int w)
 {	
