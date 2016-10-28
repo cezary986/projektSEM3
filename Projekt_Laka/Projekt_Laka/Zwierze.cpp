@@ -4,7 +4,7 @@
 
 bool Zwierze::checkSurvival(int w)
 {
-	float f = (rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
+	float f = int(rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
 	//Cialo funkcji dopadowania przyjmijmy ze to rand()
 	if (f < w)
 	{
@@ -53,3 +53,5 @@ Zwierze * Zwierze::operator +(Zwierze const & ex)
 	cub->sex = GENDER(rand() % 1);//losujemy plec
 	return cub;
 }
+
+

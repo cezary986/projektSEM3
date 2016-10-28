@@ -7,6 +7,7 @@
 
 class Populacja
 {
+	friend class Laka;
 protected:
 	vector <Zwierze*> males;
 	vector <Zwierze*> females;
@@ -20,6 +21,7 @@ public:
 	void breed(vector <Pair*>, int);
 	void survive(int);
 	void randomPairs(int);
+	void loadAnimal (vector <int>);
 };
 
 #endif // POPULACJA_H_INCLUDED

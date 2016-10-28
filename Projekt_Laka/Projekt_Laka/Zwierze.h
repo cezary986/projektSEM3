@@ -7,22 +7,22 @@
 #include <cstdlib>
 
 //enum na plec zwierzat
-enum GENDER { MALE, FEMALE };
+enum GENDER {MALE, FEMALE};
 
 class Zwierze
 {
 	friend class Populacja;
 protected:
-	vector <int> chromosome;
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 	int breedFreq;//czestotliwosc rozmnazania sie w miesiacach
 	float momsPart;//ile chromosomu bierze od matki
 	float dadsPart;
 	GENDER sex;
 public:
+	vector <int> chromosome;
 	bool checkSurvival(int w);
 	bool checkBreeding(int r);
-	Zwierze* operator + (Zwierze const&);
+	Zwierze* operator + (Zwierze const&);//NIEEEEEEE!! musi byc wirtualny
 };
 
 //stuktura sluzaca do przechowywania pary zwierzat przeznaczonej do rozmanazania
@@ -32,29 +32,6 @@ struct Pair
 	Zwierze * female;
 };
 
-class Kon: protected Zwierze
-{
-	//Kon();
-};
-class Osiol: protected Zwierze
-{
-	//Osiol();
-};
-class Mul: protected Zwierze
-{
-	//Mul();
-};
-class Jastrzab: protected Zwierze
-{
-	//Jastrzab();
-}; class Myszolow: protected Zwierze
-{
-	//Myszolow();
-};
-class Zajac: protected Zwierze
-{
-	//Zajac();
-};
 
 
 #endif // ZWIERZE_H_INCLUDED

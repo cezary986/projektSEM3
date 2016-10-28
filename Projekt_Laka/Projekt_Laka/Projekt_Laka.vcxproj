@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declarations.h" />
+    <ClInclude Include="Gatunki.h" />
     <ClInclude Include="Laka.h" />
     <ClInclude Include="Populacja.h" />
     <ClInclude Include="switches.h" />

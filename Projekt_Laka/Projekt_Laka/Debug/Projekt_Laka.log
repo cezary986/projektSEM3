@@ -1,9 +1,6 @@
 ﻿  Laka.cpp
   Generating Code...
-  Compiling...
+  Skipping... (no relevant changes detected)
   Zwierze.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\zwierze.cpp(7): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\zwierze.cpp(21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)

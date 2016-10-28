@@ -6,6 +6,7 @@
 #include <string>
 #include "declarations.h"
 #include "Populacja.h"
+#include "Zwierze.h"
 
 class Laka {
 	int k;//ile sie losuje
@@ -14,13 +15,13 @@ class Laka {
 	int monthsNumber;//liczba miesiecy
 
 protected:
-	Populacja* Kon;
-	Populacja* Osiol;
-	Populacja* Mul;
-	Populacja* Jastrzab;
-	Populacja* Myszolow;
-	Populacja* Mysz;
-	Populacja* Zajac;
+	Populacja* Konie;
+	Populacja* Osly;
+	Populacja* Muly;
+	Populacja* Jastrzebie;
+	Populacja* Myszolowy;
+	Populacja* Myszy;
+	Populacja* Zajace;
 
 public:
 	void Symyluj(int monthsNumber);
