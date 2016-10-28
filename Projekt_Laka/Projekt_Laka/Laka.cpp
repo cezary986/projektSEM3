@@ -21,6 +21,14 @@ Laka::Laka(int sk, int sw, int sr, int mn)
 	Myszolowy = nullptr;
 	Myszy = nullptr;
 	Zajace = nullptr;
+
+	Muly->breedable = 0;
+	Osly->breedable = 1;
+	Konie->breedable = 1;
+	Jastrzebie->breedable = 1;
+	Myszolowy->breedable = 1;
+	Myszy->breedable = 1;
+	Zajace->breedable = 1;
 }
 
 bool Laka::CreatePop(ifstream sfile, string filename)

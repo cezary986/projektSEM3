@@ -22,7 +22,7 @@ public:
 	vector <int> chromosome;
 	bool checkSurvival(int w);
 	bool checkBreeding(int r);
-	Zwierze* operator + (Zwierze const&);//NIEEEEEEE!! musi byc wirtualny
+	virtual Zwierze* operator +(const Zwierze *);//NIEEEEEEE!! musi byc wirtualny
 };
 
 //stuktura sluzaca do przechowywania pary zwierzat przeznaczonej do rozmanazania

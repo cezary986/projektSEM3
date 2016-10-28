@@ -1,6 +1,4 @@
-﻿  Laka.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Zwierze.cpp
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)
+﻿  Gatunki.cpp
+Gatunki.obj : error LNK2001: unresolved external symbol "public: virtual class Zwierze * __thiscall Zwierze::operator+(class Zwierze const *)" (??HZwierze@@UAEPAV0@PBV0@@Z)
+Laka.obj : error LNK2001: unresolved external symbol "public: virtual class Zwierze * __thiscall Zwierze::operator+(class Zwierze const *)" (??HZwierze@@UAEPAV0@PBV0@@Z)
+C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe : fatal error LNK1120: 1 unresolved externals

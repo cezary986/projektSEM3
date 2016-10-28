@@ -11,36 +11,43 @@ using namespace std;
 //G
 void Populacja::breed(vector <Pair*> pairs, int k)
 {
-	if (this->femalesToBreed.size() != 0 && this->malesToBreed.size() != 0)
+	if (this->breedable = 1)
 	{
-//ROZMNAZANIE
-		Zwierze * cub;//wskaznik na nowo narodzone zwierze
-		for (auto i : this->pairs)//pelta dla kazdego elementu vectora
+		if (this->femalesToBreed.size() != 0 && this->malesToBreed.size() != 0)
 		{
-			cub = (*i->female) + (*i->male);//tworze nowe zwierze na podstawie chromosomow rodzicow
-			if (cub->sex == MALE)
+			//ROZMNAZANIE
+			Zwierze * cub;//wskaznik na nowo narodzone zwierze
+			for (auto i : this->pairs)//pelta dla kazdego elementu vectora
 			{
-				this->males.push_back(cub);
-			}
-			else
-			{
-				this->females.push_back(cub);
+				cub = (*i->female) + (*i->male);//tworze nowe zwierze na podstawie chromosomow rodzicow
+				if (cub->sex == MALE)
+				{
+					this->males.push_back(cub);
+				}
+				else
+				{
+					this->females.push_back(cub);
+				}
 			}
 		}
-	}
-//NIE MA KOGO ROZMNAZAC
-	else
-	{//LOSUJE
+		//NIE MA KOGO ROZMNAZAC
+		else
+		{//LOSUJE
+			this->randomPairs(k);
+			this->breed(this->pairs, k);//jeszcze raz wywoluje funkcje tym razem ma juz na czym pracowac
+		}
+		//LOSOWANIE K PAR NA NASTEPNE ROZMNAZANIE
+				//Stworzenie vectorow maleToBreed i femalesToBreed i przeniesienie tam zwierzat
+				//Wektory z ktorych bede losowal pary do rozmnazania 
 		this->randomPairs(k);
-		this->breed(this->pairs, k);//jeszcze raz wywoluje funkcje tym razem ma juz na czym pracowac
+		//CZYSZCZE WEKTORY
+		this->malesToBreed.clear();
+		this->femalesToBreed.clear();
+}
+	else//gatunek nie rozmnaza sie np muly
+	{
+		return;
 	}
-//LOSOWANIE K PAR NA NASTEPNE ROZMNAZANIE
-		//Stworzenie vectorow maleToBreed i femalesToBreed i przeniesienie tam zwierzat
-		//Wektory z ktorych bede losowal pary do rozmnazania 
-	this->randomPairs(k);
-//CZYSZCZE WEKTORY
-	this->malesToBreed.clear();
-	this->femalesToBreed.clear();
 }
 
 

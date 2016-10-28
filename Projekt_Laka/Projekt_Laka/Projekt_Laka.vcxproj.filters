@@ -27,6 +27,9 @@
     <ClCompile Include="switches.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Gatunki.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Laka.h">

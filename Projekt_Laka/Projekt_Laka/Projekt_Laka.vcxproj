@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Gatunki.cpp" />
     <ClCompile Include="Laka.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="switches.cpp" />
