@@ -11,6 +11,7 @@ using namespace std;
 //G
 void Populacja::breed(vector <Pair*> pairs, int k)
 {
+	this->randomPairs(k);
 	if (this->breedable = 1)
 	{
 		if (this->femalesToBreed.size() != 0 && this->malesToBreed.size() != 0)
@@ -19,7 +20,7 @@ void Populacja::breed(vector <Pair*> pairs, int k)
 			Zwierze * cub;//wskaznik na nowo narodzone zwierze
 			for (auto i : this->pairs)//pelta dla kazdego elementu vectora
 			{
-				cub = (*i->female) + (*i->male);//tworze nowe zwierze na podstawie chromosomow rodzicow
+				cub = i->female->born(i->female->chromosome,i->male->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
 				if (cub->sex == MALE)
 				{
 					this->males.push_back(cub);
@@ -32,18 +33,13 @@ void Populacja::breed(vector <Pair*> pairs, int k)
 		}
 		//NIE MA KOGO ROZMNAZAC
 		else
-		{//LOSUJE
-			this->randomPairs(k);
-			this->breed(this->pairs, k);//jeszcze raz wywoluje funkcje tym razem ma juz na czym pracowac
+		{//nie ma osobnikow
+			return;
 		}
-		//LOSOWANIE K PAR NA NASTEPNE ROZMNAZANIE
-				//Stworzenie vectorow maleToBreed i femalesToBreed i przeniesienie tam zwierzat
-				//Wektory z ktorych bede losowal pary do rozmnazania 
-		this->randomPairs(k);
 		//CZYSZCZE WEKTORY
 		this->malesToBreed.clear();
-		this->femalesToBreed.clear();
-}
+		this->femalesToBreed.clear();	
+	}
 	else//gatunek nie rozmnaza sie np muly
 	{
 		return;
@@ -113,3 +109,4 @@ void Populacja::loadAnimal (vector <int> chromosome)
 {
 	
 }
+

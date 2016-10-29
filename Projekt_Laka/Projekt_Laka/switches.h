@@ -7,7 +7,7 @@
 using namespace std;
 
 void wys_komunikat();
-void switches(int, char **, string &, string &, string &, int &, int &, int &);
+void switches(int arg, char **tab, string &input, string &output, int &w, int &monthNumber, int &k, int &r);
 
 #endif // SWITCHES_H_INCLUDED
 

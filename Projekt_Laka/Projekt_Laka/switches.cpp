@@ -9,7 +9,7 @@ void wys_komunikat()
 	return;
 }
 
-void switches(int arg, char **tab, string &input, string &output, string &type, int &date, int &lenghth, int &price)
+void switches(int arg, char **tab, string &input, string &output, int &w, int &monthNumber, int &k, int &r)
 {
 	//liczba prze³¹czników
 	const int K = 6;
@@ -17,12 +17,12 @@ void switches(int arg, char **tab, string &input, string &output, string &type, 
 	//przechowuje prze³¹czniki do porównania i potem ich wprowadzone nazwy
 	string _switch[2 * K];
 
-	_switch[0] = "-k";
+	_switch[0] = "-i";
 	_switch[1] = "-o";
-	_switch[2] = "-r";
-	_switch[3] = "-t";
-	_switch[4] = "-d";
-	_switch[5] = "-c";
+	_switch[2] = "-w";
+	_switch[3] = "-r";
+	_switch[4] = "-t";
+	_switch[5] = "-k";
 
 
 	//sprawdzenie czy liczba prze³¹czników jest dobra, +1 bo nazwa programu
@@ -72,9 +72,9 @@ void switches(int arg, char **tab, string &input, string &output, string &type, 
 	//przekazanie do main, bo referencja
 	input = _switch[6];
 	output = _switch[7];
-	type = _switch[8];
 	//zmiana z string na inta
-	//	date= stoi(_switch[9]);
-	//lenghth= stoi(_switch[10]);
-	//	price= stoi(_switch[11]);
+	w = stoi(_switch[8]);
+	r= stoi(_switch[9]);
+	monthNumber = stoi(_switch[10]);
+	k = stoi(_switch[11]);
 }

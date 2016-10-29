@@ -8,14 +8,13 @@ using namespace std;
 class Kon : public Zwierze
 {
 	friend class Osiol;
-	Kon* operator +(const Kon*);
-	//Mul* operator +(const Osiol*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Osiol : public Zwierze
 {
 	friend class Kon;
-	Osiol *operator +(const Osiol*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 	//Mul* operator +(const Kon*);
 };
 
@@ -23,27 +22,27 @@ class Mul : public Zwierze
 {
 	friend class Osiol;
 	friend class Kon;
-	Mul * operator +(const Mul*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Jastrzab : public Zwierze
 {
-	Jastrzab * operator +(const Jastrzab*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Myszolow : public  Zwierze
 {
-	Myszolow * operator +(const Myszolow*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Zajac : public Zwierze
 {
-	Zajac * operator +(const Zajac*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Mysz : public Zwierze
 {
-	Mysz * operator +(const Mysz*);
+	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 #endif // GATUNKI_H_INCLUDED

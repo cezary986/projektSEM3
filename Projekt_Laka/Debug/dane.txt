@@ -1,0 +1,93 @@
+Koñ 29 63 34 49 24 44 18 
+Koñ 29 93 
+Koñ 15 75 20 61 43 
+Koñ 5 6 75 20 57 
+Koñ 32 
+Koñ 32 9 18 52 
+Koñ 24 50 
+Koñ 
+Koñ 52 45 99 51 22 17 55 94 
+Koñ 55 33 79 31 
+Koñ 23 51 18 86 
+Koñ 54 
+Osio³ 61 15 74 0 86 29 28 58 15 
+Osio³ 
+Osio³ 81 
+Osio³ 44 11 44 73 49 73 63 9 95 
+Osio³ 24 88 72 57 6 
+Osio³ 13 20 75 55 39 85 
+Osio³ 29 15 24 20 88 58 
+Osio³ 87 74 92 53 90 11 94 62 
+Osio³ 43 37 50 
+Osio³ 17 34 11 63 54 
+Mu³ 31 85 95 39 6 50 47 36 12 
+Mu³ 44 4 95 88 12 18 
+Jastrz¹b 5 
+Jastrz¹b 43 42 
+Jastrz¹b 55 8 42 94 58 57 85 
+Jastrz¹b 87 23 
+Jastrz¹b 35 
+Jastrz¹b 58 26 
+Jastrz¹b 43 66 94 87 
+Jastrz¹b 87 70 
+Jastrz¹b 34 78 23 69 91 70 71 67 
+Jastrz¹b 71 45 23 3 58 99 38 
+Jastrz¹b 33 60 63 18 
+Jastrz¹b 79 60 66 25 44 80 
+Myszolów 67 85 45 92 41 
+Myszolów 2 90 13 31 7 66 99 95 
+Myszolów 3 
+Myszolów 90 6 46 94 62 99 83 46 
+Myszolów 92 35 71 96 77 98 33 
+Myszolów 69 
+Myszolów 82 29 87 50 71 
+Myszolów 37 6 11 
+Myszolów 74 31 11 76 37 61 89 41 
+Myszolów 21 47 49 62 47 82 
+Myszolów 96 65 32 24 58 3 
+Myszolów 64 49 92 73 92 
+Myszolów 8 71 
+Myszolów 32 
+Myszolów 96 22 88 68 83 38 
+Myszolów 64 99 80 13 1 77 55 
+Myszolów 75 44 84 94 63 39 92 16 
+Myszolów 74 30 37 13 19 
+Myszolów 
+Myszolów 57 
+Myszolów 
+Myszolów 3 95 46 
+Myszolów 68 5 55 18 70 
+Myszolów 
+Myszolów 61 23 12 
+Myszolów 83 14 
+Myszolów 35 69 16 96 
+Myszolów 30 64 64 8 78 28 23 77 
+Myszolów 
+Myszolów 11 32 65 59 24 30 6 49 
+Myszolów 17 6 51 86 
+Myszolów 15 41 2 
+Myszolów 47 49 86 70 84 57 18 
+Mysz 20 22 21 74 70 97 28 
+Mysz 69 19 60 32 44 18 92 
+Mysz 54 6 26 57 15 85 0 
+Mysz 46 
+Mysz 18 
+Zaj¹c 28 24 66 82 76 91 79 
+Zaj¹c 81 59 61 35 
+Zaj¹c 0 
+Zaj¹c 33 
+Zaj¹c 61 89 37 37 
+Zaj¹c 91 95 6 8 42 
+Zaj¹c 14 61 31 99 50 97 13 28 
+Zaj¹c 67 80 
+Zaj¹c 56 57 67 
+Zaj¹c 63 94 
+Zaj¹c 98 34 53 48 2 51 71 59 22 
+Zaj¹c 
+Zaj¹c 5 29 71 88 58 80 54 
+Zaj¹c 99 10 86 58 0 24 22 99 78 
+Zaj¹c 
+Zaj¹c 93 45 54 90 19 82 
+Zaj¹c 88 
+Zaj¹c 34 18 54 42 9 61 29 44 
+Zaj¹c 85 24 11 39 36 

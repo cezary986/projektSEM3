@@ -17,12 +17,12 @@ protected:
 	int breedFreq;//czestotliwosc rozmnazania sie w miesiacach
 	float momsPart;//ile chromosomu bierze od matki
 	float dadsPart;
-	GENDER sex;
 public:
+	GENDER sex;
 	vector <int> chromosome;
 	bool checkSurvival(int w);
 	bool checkBreeding(int r);
-	virtual Zwierze* operator +(const Zwierze *);//NIEEEEEEE!! musi byc wirtualny
+	virtual Zwierze* born(vector<int>,vector<int>) =0;
 };
 
 //stuktura sluzaca do przechowywania pary zwierzat przeznaczonej do rozmanazania
