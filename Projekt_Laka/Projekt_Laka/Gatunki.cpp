@@ -1,5 +1,9 @@
 #include "Gatunki.h"
 
+//Wszystkie metody born tworza i zwracaja nowe zwierze tego samego typu co rodzic 
+//jego chromosom tworza na podstawie chromosomow rodzicow
+
+
 Zwierze * Kon::born(vector<int> mamsPart, vector <int> dadsPart)
 {
 	Zwierze * cub = new Kon;

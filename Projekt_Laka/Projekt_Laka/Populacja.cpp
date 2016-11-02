@@ -5,16 +5,20 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
+//using namespace std;
 
 
-//G
-void Populacja::breed(vector <Pair*> pairs, int k)
+//Funkcja obslugujaca pojedyncze rozmnazanie w populacji
+void Populacja::breed(vector <Pair*> pairs,int k,float r)
 {
-	this->randomPairs(k);
+	this->femalesToBreed = this->females;
+	this->malesToBreed = this->males;
+
+	this->randomPairs(k,r);
+
 	if (this->breedable = 1)
 	{
-		if (this->femalesToBreed.size() != 0 && this->malesToBreed.size() != 0)
+		if (this->pairs.size() != 0)
 		{
 			//ROZMNAZANIE
 			Zwierze * cub;//wskaznik na nowo narodzone zwierze
@@ -47,7 +51,7 @@ void Populacja::breed(vector <Pair*> pairs, int k)
 }
 
 
-//G
+//Sprawdzenie ktorzy z czlownkow populacji przezyja i ewentualne usuniecie ich
 void Populacja::survive(int w)
 {	
 	//sprawdzam dla samic
@@ -72,8 +76,8 @@ void Populacja::survive(int w)
 	}
 }
 
-//G
-void Populacja::randomPairs(int k)
+//Wylosowanie par do rozmnazania  i dodanie ich do vectora pairs
+void Populacja::randomPairs(int k,int r)
 {
 	int index;
 	for (int i = 0; i < k; i++)
@@ -86,7 +90,7 @@ void Populacja::randomPairs(int k)
 		Pair * temp = new Pair;
 		index = rand() % this->femalesToBreed.size();
 		//losje i sprawdzam zdolnosc do rozmanzania sie
-		while(this->femalesToBreed[index]->checkBreeding != 0)
+		while(this->femalesToBreed[index]->checkBreeding > r)
 		{
 			index = rand() % this->femalesToBreed.size();
 		}
@@ -94,7 +98,7 @@ void Populacja::randomPairs(int k)
 		temp->female = this->femalesToBreed[index];
 		//losuje samca
 		index = rand() % this->malesToBreed.size();
-		while (this->malesToBreed[index]->checkBreeding != 0)
+		while (this->malesToBreed[index]->checkBreeding > r)
 		{
 			index = rand() % this->malesToBreed.size();
 		}
@@ -105,8 +109,4 @@ void Populacja::randomPairs(int k)
 }
 
 
-void Populacja::loadAnimal (vector <int> chromosome)
-{
-	
-}
 

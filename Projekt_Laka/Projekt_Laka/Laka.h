@@ -1,17 +1,15 @@
 #ifndef LAKA_H_INCLUDED
 #define LAKA_H_INCLUDED
 
-#include <vector>
+
 #include <fstream>
 #include <string>
-#include "declarations.h"
 #include "Populacja.h"
-#include "Zwierze.h"
 
 class Laka {
 	int k;//ile sie losuje
-	int w;//wpolczynnik wymierzania
-	int r;//wspolczynnik rozmanzania
+	float w;//wpolczynnik wymierzania
+	float r;//wspolczynnik rozmanzania
 	int monthsNumber;//liczba miesiecy
 
 protected:
@@ -24,9 +22,9 @@ protected:
 	Populacja* Zajace;
 
 public:
+	Laka(int sk, float sw, float sr, int smn);
 	void Symyluj(int monthsNumber);
-	Laka(int sk, int sw, int sr, int smn);
-	bool CreatePop(ifstream sfile, string filename);
+	bool CreatePop(ifstream &sfile, string filename);
 };
 
 #endif // LAKA_H_INCLUDED

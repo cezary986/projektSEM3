@@ -1,4 +1,3 @@
-﻿  main.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\main.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\main.cpp(30): error C2280: 'std::basic_ifstream<char,std::char_traits<char>>::basic_ifstream(const std::basic_ifstream<char,std::char_traits<char>> &)': attempting to reference a deleted function
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\fstream(831): note: see declaration of 'std::basic_ifstream<char,std::char_traits<char>>::basic_ifstream'
+﻿  getParameters.cpp
+Laka.obj : error LNK2019: unresolved external symbol "public: void __thiscall Populacja::breed(class std::vector<struct Pair *,class std::allocator<struct Pair *> >,int,float)" (?breed@Populacja@@QAEXV?$vector@PAUPair@@V?$allocator@PAUPair@@@std@@@std@@HM@Z) referenced in function "public: void __thiscall Laka::Symyluj(int)" (?Symyluj@Laka@@QAEXH@Z)
+C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe : fatal error LNK1120: 1 unresolved externals

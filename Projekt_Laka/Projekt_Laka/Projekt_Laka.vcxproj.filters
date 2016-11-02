@@ -24,10 +24,10 @@
     <ClCompile Include="Zwierze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="switches.cpp">
+    <ClCompile Include="Gatunki.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gatunki.cpp">
+    <ClCompile Include="getParameters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClInclude Include="declarations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="switches.h">
+    <ClInclude Include="Gatunki.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gatunki.h">
+    <ClInclude Include="getParameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

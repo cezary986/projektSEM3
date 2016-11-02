@@ -1,9 +1,9 @@
 #ifndef POPULACJA_H_INCLUDED
 #define POPULACJA_H_INCLUDED
 
+#include <vector>
 #include "declarations.h"
 #include "Zwierze.h"
-#include <vector>
 
 class Populacja
 {
@@ -21,11 +21,11 @@ protected:
 	vector <Pair*> pairs;//vector na wylosowane do rozmnazania sie pary
 public:
 	bool breedable;
-	void breed(vector <Pair*>, int);
+	void breed(vector <Pair*>, int, float);
 	void survive(int);
-	void randomPairs(int);
+	void randomPairs(int, int);
 	void loadAnimal (vector <int>);
-	void addAnimals(struct Pair*);
+	//void addAnimals(struct Pair*);
 };
 
 #endif // POPULACJA_H_INCLUDED

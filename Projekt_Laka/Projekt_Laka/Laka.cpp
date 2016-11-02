@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Laka::Laka(int sk, int sw, int sr, int mn)
+Laka::Laka(int sk, float sw, float sr, int mn)
 {
 	k = sk;
 	w = sw;
@@ -22,6 +22,7 @@ Laka::Laka(int sk, int sw, int sr, int mn)
 	Myszy = nullptr;
 	Zajace = nullptr;
 
+	//1 - moze sie rozmnazac, 0 - nie moze
 	Muly->breedable = 0;
 	Osly->breedable = 1;
 	Konie->breedable = 1;
@@ -31,7 +32,8 @@ Laka::Laka(int sk, int sw, int sr, int mn)
 	Zajace->breedable = 1;
 }
 
-bool Laka::CreatePop(ifstream sfile, string filename)
+//metoda wcztujaca populacje z pliku ( wszyskie populacje)
+bool Laka::CreatePop(ifstream &sfile, string filename)
 {
 	sfile.open(filename,ios::out);
 	stringstream streamLine;
@@ -160,4 +162,42 @@ bool Laka::CreatePop(ifstream sfile, string filename)
 		return 0;
 	}
 
+}
+
+
+//Glowna metoda symulujaca caly rozwoj populacji na lace
+void Laka::Symyluj(int monthsNumber)
+{	
+	//dla wybranej liczby miesiecy
+	for (int mounth = 0; mounth < monthsNumber; mounth++)
+	{
+		if (mounth == KONIE_F)
+		{
+			this->Konie->breed(this->Konie->pairs,this->k, this->r);
+		}
+		if (mounth == OSLY_F)
+		{
+			this->Osly->breed(this->Osly->pairs, this->k, this->r);
+		}
+		if (mounth == MULY_F)
+		{
+			this->Muly->breed(this->Muly->pairs,this->k, this->r);
+		}
+		if (mounth == JASTRZEBIE_F)
+		{
+			this->Jastrzebie->breed(this->Jastrzebie->pairs,this->k, this->r);
+		}
+		if (mounth == MYSZOLOWY_F)
+		{
+			this->Myszolowy->breed(this->Myszolowy->pairs,this->k,this->r);
+		}
+		if (mounth == MYSZY_F)
+		{
+			this->Myszy->breed(this->Myszy->pairs, this->k, this->r);
+		}
+		if (mounth == ZAJACE_F)
+		{
+			this->Zajace->breed(this->Zajace->pairs, this->k, this->r);
+		}
+	}
 }

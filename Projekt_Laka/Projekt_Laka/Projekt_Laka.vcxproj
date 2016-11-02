@@ -113,7 +113,7 @@
     <ClCompile Include="Gatunki.cpp" />
     <ClCompile Include="Laka.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="switches.cpp" />
+    <ClCompile Include="getParameters.cpp" />
     <ClCompile Include="Zwierze.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +121,7 @@
     <ClInclude Include="Gatunki.h" />
     <ClInclude Include="Laka.h" />
     <ClInclude Include="Populacja.h" />
-    <ClInclude Include="switches.h" />
+    <ClInclude Include="getParameters.h" />
     <ClInclude Include="Zwierze.h" />
   </ItemGroup>
   <ItemGroup>
