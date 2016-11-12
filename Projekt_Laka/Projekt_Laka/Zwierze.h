@@ -5,6 +5,7 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
+#include <iostream>
 
 
 using namespace std;
@@ -26,6 +27,7 @@ public:
 	bool checkSurvival(float w);
 	bool checkBreeding(float r);
 	virtual Zwierze* born(vector<int>,vector<int>) =0;
+	friend ostream& operator <<(ostream &output, Zwierze const& ex);
 };
 
 //stuktura sluzaca do przechowywania pary zwierzat przeznaczonej do rozmanazania

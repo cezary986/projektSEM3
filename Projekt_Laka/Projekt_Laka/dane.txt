@@ -1,280 +1,405 @@
-Kon 43 20 94 
-Kon 7 7 91 40 94 97 70 5 94 
-Kon 63 47 35 52 50 19 
-Kon 63 75 69 54 62 0 
-Kon 9 16 
-Kon 36 58 95 73 9 42 72 72 
-Kon 48 
+Kon 43 47 59 
+Kon 31 11 1 89 6 40 
+Kon 88 
+Kon 49 
+Kon 84 
+Kon 87 71 
 Kon 
-Kon 36 
-Kon 53 72 
-Osiol 12 56 42 10 66 73 23 15 
-Osiol 67 44 91 33 
-Osiol 87 38 39 39 24 65 81 
-Osiol 61 66 71 86 72 13 88 
-Osiol 87 14 39 48 69 
-Osiol 21 94 91 
-Osiol 42 27 77 86 22 
-Osiol 46 39 82 78 
-Osiol 99 
-Osiol 55 38 29 
+Kon 52 
+Kon 34 24 12 81 31 96 50 
+Kon 12 86 77 12 5 9 32 
+Kon 
+Kon 
+Kon 51 96 73 98 47 
+Kon 64 19 39 51 20 73 44 
+Kon 75 33 14 19 46 
+Kon 8 81 
+Kon 34 74 76 95 14 92 98 
+Kon 39 58 20 88 97 34 35 
+Kon 22 65 77 4 31 58 36 74 
+Kon 64 19 39 42 14 
+Kon 36 21 68 19 18 
+Kon 
+Kon 86 55 2 68 68 73 42 94 0 
+Kon 
+Kon 73 22 44 19 7 93 
+Kon 25 93 70 22 56 
+Kon 22 
+Kon 94 7 12 9 
+Kon 37 70 62 40 7 17 80 
+Kon 46 3 
+Kon 93 23 61 0 19 39 46 90 
+Kon 23 75 
+Kon 0 9 46 30 81 97 4 85 
+Kon 21 
+Kon 11 59 89 23 6 
+Kon 80 4 13 18 94 
+Kon 45 77 74 94 24 36 92 
+Kon 72 56 10 61 98 94 28 
+Kon 36 16 72 32 68 78 11 13 
+Kon 51 86 82 78 
+Kon 56 40 57 71 68 30 76 98 25 
+Kon 54 42 48 56 5 61 10 15 37 
+Kon 82 63 68 1 
+Kon 88 
+Kon 13 93 9 89 15 59 3 99 80 
+Kon 69 21 28 2 
+Kon 27 5 2 18 92 90 5 
+Kon 33 79 43 89 96 76 75 91 
+Kon 51 68 18 53 38 76 45 76 79 
+Kon 52 67 2 54 85 62 92 25 89 
+Osiol 10 62 12 54 97 19 46 10 71 
+Osiol 71 
+Osiol 94 45 93 
+Osiol 39 67 77 70 78 
+Osiol 74 78 8 67 80 39 17 1 
+Osiol 94 23 16 72 71 
+Osiol 9 59 89 2 54 19 90 
+Osiol 94 13 45 66 43 24 8 20 74 
 Osiol 
-Osiol 13 46 89 27 
-Osiol 72 21 13 3 0 32 43 
-Osiol 71 77 89 7 63 49 81 84 33 
-Osiol 54 86 56 53 
-Osiol 32 60 74 12 46 83 84 45 
-Osiol 24 65 82 16 83 59 66 60 
-Osiol 44 50 78 84 6 26 3 69 29 
-Osiol 9 79 6 38 21 47 87 81 33 
-Osiol 44 2 
-Mul 62 92 60 44 53 53 38 48 
-Mul 20 81 
+Osiol 90 11 16 86 59 54 39 63 90 
+Osiol 39 36 83 50 12 
+Osiol 33 27 
+Osiol 
+Osiol 
+Osiol 93 47 54 84 6 13 67 9 
+Osiol 17 45 68 11 44 8 
+Osiol 76 91 11 48 63 77 
+Osiol 31 14 
+Osiol 71 12 
+Osiol 50 16 
+Osiol 48 19 38 71 38 13 26 85 
+Osiol 18 41 14 47 89 20 30 30 56 
+Osiol 83 59 93 64 21 77 56 79 
+Osiol 65 16 28 26 44 80 6 93 44 
+Osiol 17 52 98 55 18 48 47 82 51 
+Osiol 81 31 92 69 61 0 86 95 51 
+Osiol 55 75 26 50 47 15 28 34 97 
+Osiol 52 24 12 82 
+Osiol 43 84 7 62 
+Osiol 40 81 
+Mul 67 2 88 37 85 
+Mul 51 20 86 57 98 
+Mul 46 20 
 Mul 
-Mul 48 73 89 14 
-Mul 
-Mul 88 54 35 70 98 1 96 
-Mul 96 42 71 98 
-Mul 
-Mul 90 66 91 62 87 59 36 24 
-Mul 66 4 9 16 52 77 90 
-Mul 40 90 
-Mul 76 83 8 
-Mul 70 17 57 74 82 93 75 95 58 
-Mul 57 30 92 62 25 1 
-Mul 33 70 93 10 
-Mul 50 39 
-Mul 89 83 95 88 57 73 85 
-Mul 44 7 31 91 44 55 71 37 
-Mul 79 77 25 38 29 26 95 91 
-Mul 49 
-Mul 36 
-Mul 86 22 47 34 
-Mul 55 33 
-Mul 3 47 22 
-Mul 9 2 35 29 64 2 41 87 
-Mul 65 39 82 95 9 23 
-Mul 27 97 41 64 15 63 
-Mul 9 64 55 42 52 29 23 42 82 
-Mul 38 44 53 63 78 72 14 90 
-Mul 14 31 55 72 25 35 9 43 81 
-Jastrzab 90 23 99 39 61 49 
-Jastrzab 
-Jastrzab 71 3 41 47 63 52 
-Jastrzab 31 79 56 63 57 85 5 74 71 
-Jastrzab 
-Jastrzab 74 10 16 55 93 78 67 98 77 
-Jastrzab 64 96 72 80 92 27 30 41 
-Jastrzab 20 1 19 10 73 35 
-Jastrzab 51 48 87 16 88 83 
-Jastrzab 89 
-Jastrzab 52 75 10 49 27 68 52 
-Jastrzab 74 1 81 9 72 69 
-Jastrzab 5 37 17 17 70 37 
-Jastrzab 11 
-Jastrzab 22 22 25 24 88 30 74 8 
-Jastrzab 22 24 34 55 23 60 79 
-Jastrzab 83 51 58 22 94 
-Jastrzab 
-Jastrzab 27 43 13 
-Jastrzab 63 23 
-Jastrzab 23 
-Jastrzab 37 
-Jastrzab 84 85 
-Jastrzab 27 49 71 87 44 64 37 11 
-Jastrzab 
-Jastrzab 0 90 57 59 72 
-Jastrzab 33 13 3 38 
-Jastrzab 16 8 72 74 81 86 23 59 47 
-Jastrzab 84 82 32 85 
-Jastrzab 82 39 98 7 43 46 
-Jastrzab 59 47 87 19 40 72 1 69 11 
-Jastrzab 66 
-Jastrzab 65 23 86 
-Jastrzab 61 16 
-Jastrzab 16 
-Jastrzab 66 91 
-Jastrzab 72 59 13 6 35 3 7 
-Jastrzab 89 
-Jastrzab 72 70 92 11 93 84 40 97 10 
-Jastrzab 78 20 22 
-Jastrzab 65 5 14 31 75 75 98 
-Jastrzab 75 17 25 36 59 11 
-Jastrzab 24 5 95 28 42 23 31 47 
-Jastrzab 28 42 31 69 3 20 41 
-Jastrzab 74 
-Jastrzab 81 66 59 69 99 36 66 9 
-Jastrzab 4 28 85 55 16 26 
-Jastrzab 24 87 28 9 25 0 39 44 
-Jastrzab 
-Jastrzab 73 11 
-Myszolow 57 88 
-Myszolow 12 30 31 76 5 
-Myszolow 40 76 49 32 97 51 
-Myszolow 70 68 8 12 68 80 19 56 8 
-Myszolow 49 31 85 67 
-Myszolow 35 69 72 60 19 38 68 20 31 
-Myszolow 21 68 
+Mul 14 11 26 37 12 32 11 89 
+Jastrzab 43 73 98 19 3 77 54 41 10 
+Jastrzab 74 9 60 63 99 89 32 77 
+Jastrzab 37 99 7 20 76 73 41 65 
+Jastrzab 4 40 35 98 
+Jastrzab 84 9 62 36 
+Jastrzab 24 52 11 86 82 76 71 62 77 
+Jastrzab 60 73 18 34 56 23 75 95 42 
+Jastrzab 86 75 73 3 23 85 86 
+Jastrzab 40 57 80 98 50 25 
+Jastrzab 11 87 93 2 48 82 
+Myszolow 46 92 66 14 68 68 87 44 98 
+Myszolow 5 
+Myszolow 21 33 11 99 
+Myszolow 45 
+Myszolow 74 18 33 50 8 21 71 
 Myszolow 
-Myszolow 66 27 77 93 75 22 99 
-Myszolow 93 39 
-Myszolow 81 68 83 6 45 
-Myszolow 
-Myszolow 66 44 81 54 
-Myszolow 15 60 93 30 57 
-Myszolow 
-Myszolow 17 
-Myszolow 16 35 53 11 52 80 83 56 
-Myszolow 40 20 4 89 24 
-Myszolow 60 
-Myszolow 
-Myszolow 64 38 36 63 24 24 6 
-Myszolow 90 74 78 
-Myszolow 
-Myszolow 85 37 26 51 12 66 47 
-Myszolow 90 67 61 29 13 10 
-Myszolow 13 
-Myszolow 56 
-Myszolow 
-Myszolow 1 83 73 14 
-Myszolow 86 15 2 9 73 
-Myszolow 20 62 68 52 
-Myszolow 73 9 25 5 50 84 
-Myszolow 79 3 34 11 61 81 
-Myszolow 96 
-Myszolow 71 64 14 4 93 57 
-Myszolow 96 37 20 19 44 
-Myszolow 
-Myszolow 
-Myszolow 36 62 38 44 32 66 79 88 
-Myszolow 
-Mysz 29 22 15 75 99 
-Mysz 74 44 83 
-Mysz 6 52 54 16 34 54 
+Myszolow 62 89 38 38 
+Myszolow 56 78 4 26 30 88 46 
+Myszolow 57 46 60 82 95 29 9 26 75 
+Myszolow 86 14 44 
+Mysz 72 55 29 31 54 71 
+Mysz 12 6 89 72 29 98 99 25 81 
+Mysz 20 61 
+Mysz 80 32 19 10 43 96 74 
+Mysz 48 45 65 39 45 29 
+Mysz 89 19 59 24 70 63 66 91 49 
 Mysz 
-Mysz 98 68 81 72 43 34 
-Mysz 38 95 
-Mysz 24 33 
-Mysz 96 91 3 15 92 3 
-Mysz 3 41 2 69 19 4 89 59 
-Mysz 17 87 7 
-Mysz 38 60 
+Mysz 73 72 43 62 
+Mysz 17 
+Mysz 57 3 90 52 95 85 54 
+Mysz 94 62 41 
+Mysz 6 67 54 46 72 10 50 
+Mysz 73 19 20 56 23 22 35 
+Mysz 
+Mysz 83 96 13 23 10 40 44 23 
+Mysz 60 16 25 69 
+Mysz 61 
+Mysz 19 48 12 29 35 25 
+Mysz 
+Mysz 
+Mysz 11 15 34 88 51 11 85 
+Mysz 88 17 74 63 70 21 73 38 62 
+Mysz 15 84 27 16 73 81 88 4 30 
+Mysz 71 13 23 23 78 40 52 
+Mysz 0 93 77 77 18 31 96 
+Mysz 
+Mysz 
+Mysz 68 49 39 90 51 37 
+Mysz 4 68 93 38 51 
+Mysz 47 4 
+Mysz 10 51 96 60 0 63 
+Mysz 93 64 63 
+Mysz 21 
+Mysz 92 
+Mysz 40 25 44 97 62 97 59 52 73 
+Mysz 80 49 85 50 49 71 6 82 
+Mysz 59 18 83 65 40 70 91 
+Mysz 79 20 
+Mysz 
+Mysz 31 
+Mysz 87 79 22 35 98 78 98 
+Mysz 8 80 
+Mysz 81 
+Mysz 94 93 
+Mysz 32 15 49 60 83 
+Mysz 11 45 25 38 22 43 90 
+Mysz 91 13 30 27 55 
+Mysz 40 86 20 9 
+Mysz 50 38 87 23 
+Mysz 26 
+Mysz 78 31 67 74 94 83 7 
+Mysz 34 38 92 76 82 70 55 
+Mysz 86 
+Mysz 24 98 
+Mysz 79 0 27 92 95 51 96 34 
+Mysz 62 17 
+Mysz 
+Mysz 1 89 56 19 60 43 43 
+Mysz 43 11 62 10 81 
+Mysz 20 61 77 
+Mysz 61 81 
+Mysz 63 0 65 2 
+Mysz 57 73 97 42 20 60 58 9 
+Mysz 85 1 23 
+Mysz 26 15 49 50 29 34 82 
+Mysz 36 13 43 39 48 61 52 
+Mysz 34 75 42 73 
+Mysz 94 66 63 44 0 77 73 
+Mysz 36 80 74 84 74 98 
+Mysz 15 14 3 7 4 22 87 27 40 
+Mysz 87 40 49 
+Mysz 63 73 19 59 
+Mysz 67 
+Mysz 37 10 97 
+Mysz 71 50 57 25 63 5 12 
+Mysz 57 79 
+Mysz 47 42 83 1 78 10 19 61 45 
+Mysz 
+Mysz 93 63 94 
+Mysz 
+Mysz 81 6 
+Mysz 40 
+Mysz 15 31 27 92 53 94 21 93 
+Mysz 83 
+Mysz 31 34 
+Mysz 54 48 69 53 66 72 0 
+Mysz 46 22 8 15 63 
+Mysz 59 41 97 74 
+Mysz 72 52 72 29 27 51 
+Mysz 31 74 0 38 
+Mysz 
+Mysz 53 71 93 57 86 61 4 25 91 
+Mysz 45 5 95 90 
+Mysz 79 76 41 90 20 
+Mysz 7 99 74 
+Mysz 42 
+Mysz 
+Mysz 86 34 37 30 78 68 83 50 81 
+Mysz 50 24 
+Mysz 77 52 
+Mysz 0 
+Mysz 96 
+Mysz 
+Mysz 65 88 73 40 52 90 79 72 48 
+Mysz 32 41 
+Mysz 
+Mysz 53 54 21 40 13 4 61 42 2 
+Mysz 69 15 68 86 48 52 62 21 46 
+Mysz 55 12 75 16 95 58 
+Mysz 1 42 53 53 76 91 48 16 
+Mysz 81 37 80 3 14 3 0 
+Mysz 77 22 40 36 90 59 52 88 
+Mysz 54 
+Mysz 75 13 
+Mysz 88 73 31 39 17 
+Mysz 95 44 68 63 83 27 9 10 89 
+Mysz 78 92 45 72 85 
+Mysz 75 96 47 41 65 76 23 56 
+Mysz 64 79 19 84 10 81 10 83 
+Mysz 24 51 34 75 92 59 30 52 51 
+Mysz 85 58 30 
+Mysz 60 31 
+Mysz 95 92 45 
+Mysz 63 26 48 29 68 
+Mysz 2 53 12 19 84 
+Mysz 56 79 83 21 
+Mysz 82 22 60 76 
+Mysz 34 79 80 26 72 
+Mysz 17 88 25 92 56 8 60 49 52 
+Mysz 83 25 79 40 
+Mysz 9 98 13 78 37 35 29 
+Mysz 79 53 44 47 44 31 32 
+Mysz 75 13 63 77 53 15 1 
+Mysz 
+Mysz 39 69 82 
+Mysz 81 58 49 61 33 29 84 94 85 
+Mysz 85 17 20 39 74 25 
+Mysz 75 69 
+Mysz 21 50 52 
+Mysz 3 64 21 28 1 45 
+Mysz 
+Mysz 11 88 92 34 21 7 86 65 94 
+Mysz 
+Mysz 79 86 21 17 2 45 27 69 
+Mysz 22 
+Mysz 35 46 
+Mysz 70 
+Mysz 34 
+Mysz 88 56 49 13 91 63 4 57 50 
+Mysz 7 56 84 0 39 59 91 
+Mysz 
+Mysz 64 99 27 33 
+Mysz 95 64 21 33 59 11 
+Mysz 77 59 26 10 83 98 87 
+Mysz 7 19 15 54 20 28 41 
+Mysz 19 36 13 9 83 11 44 67 59 
+Mysz 81 47 71 50 8 99 51 
+Mysz 42 
+Mysz 72 82 70 71 73 1 
+Mysz 60 85 64 69 98 
+Mysz 69 13 10 13 56 
+Mysz 43 30 45 85 19 99 99 6 67 
+Mysz 
+Mysz 40 82 
+Mysz 91 63 16 60 37 74 
+Mysz 77 54 
+Mysz 35 59 
+Mysz 26 84 83 2 48 52 2 65 
+Mysz 8 48 39 68 69 51 28 83 15 
+Mysz 12 94 86 43 94 64 33 66 98 
+Mysz 80 47 98 64 
 Mysz 45 
-Mysz 55 33 
-Mysz 95 7 79 58 43 77 10 89 11 
-Mysz 9 15 37 51 95 97 80 87 54 
-Mysz 6 19 58 75 45 40 85 57 89 
+Mysz 91 13 35 78 56 44 4 
+Mysz 34 42 
 Mysz 
-Mysz 11 9 57 62 
-Mysz 91 70 79 17 49 44 
-Mysz 62 70 49 73 78 25 
-Mysz 51 
-Mysz 88 95 59 27 47 76 46 36 
+Mysz 95 71 28 
+Mysz 4 22 0 
+Mysz 46 49 81 73 93 
 Mysz 
+Mysz 5 0 
+Mysz 35 
+Mysz 41 48 57 53 62 
+Mysz 1 87 25 18 19 97 64 16 
+Mysz 44 12 90 
+Mysz 30 99 23 
 Mysz 
-Mysz 45 47 49 14 18 25 19 62 30 
-Mysz 65 22 64 29 13 15 
-Mysz 51 29 1 80 92 
-Mysz 70 60 72 8 
-Mysz 70 14 41 65 71 
-Mysz 4 67 33 81 63 95 17 
-Mysz 30 
-Mysz 80 64 86 80 8 80 46 51 
-Mysz 69 53 99 71 24 84 6 87 
-Mysz 5 88 93 41 85 86 
-Mysz 58 
-Mysz 30 82 6 43 82 40 83 72 
-Mysz 32 43 5 15 1 60 
-Mysz 74 
-Mysz 78 33 56 83 70 67 87 3 
-Mysz 36 1 93 41 8 0 53 82 
-Mysz 9 42 82 8 68 17 42 54 40 
-Mysz 65 44 67 42 86 94 21 57 11 
-Mysz 78 80 
-Mysz 77 73 11 9 66 83 41 
-Mysz 96 99 18 
-Mysz 52 54 29 54 22 
+Mysz 71 59 84 
+Mysz 33 68 9 27 58 44 0 17 
+Mysz 26 0 95 72 62 72 97 70 
+Mysz 5 66 47 
+Mysz 99 92 35 51 65 23 
+Mysz 57 24 79 27 38 
+Mysz 63 72 
+Mysz 36 55 13 
 Mysz 
-Mysz 39 60 3 27 5 15 42 14 
+Mysz 94 83 72 11 12 26 81 18 
+Mysz 15 38 46 16 22 13 22 85 
 Mysz 
-Mysz 26 21 70 41 99 41 95 
-Mysz 48 12 59 34 28 42 29 62 61 
-Mysz 98 11 49 68 30 40 52 
-Mysz 3 61 89 
-Mysz 40 29 77 78 39 39 37 60 26 
-Mysz 40 84 86 57 32 21 58 
-Mysz 23 97 99 8 21 34 76 59 
-Mysz 41 51 3 72 
-Mysz 32 76 60 
-Mysz 97 91 81 
-Mysz 19 75 53 30 
-Zajac 24 19 30 94 83 65 93 88 2 
-Zajac 29 2 
-Zajac 93 47 30 
-Zajac 57 51 95 8 19 
-Zajac 96 98 21 28 
-Zajac 66 1 74 10 12 57 
-Zajac 23 45 19 36 6 3 
-Zajac 90 31 11 73 
-Zajac 59 92 18 60 10 46 51 20 63 
-Zajac 83 14 6 28 74 59 77 
-Zajac 50 
-Zajac 18 80 6 96 32 26 75 
-Zajac 36 8 78 96 35 11 22 79 
-Zajac 5 62 80 
-Zajac 70 22 64 83 86 18 19 
+Mysz 24 1 
+Mysz 96 32 43 1 91 36 7 29 
+Zajac 91 83 15 78 72 95 0 74 
+Zajac 9 38 86 78 21 29 69 12 
+Zajac 30 86 86 
+Zajac 51 9 61 17 36 42 41 
+Zajac 16 18 63 6 
+Zajac 75 97 22 
+Zajac 7 2 18 11 38 54 52 47 
+Zajac 96 
+Zajac 46 41 51 81 13 31 
 Zajac 
-Zajac 66 
-Zajac 78 53 24 31 23 67 27 24 52 
-Zajac 26 68 25 34 
-Zajac 61 63 65 77 76 79 91 57 39 
-Zajac 99 88 4 88 68 
-Zajac 11 24 87 59 50 39 
-Zajac 73 87 69 71 16 69 6 58 94 
-Zajac 76 31 73 44 
-Zajac 83 14 35 7 
-Zajac 60 83 48 0 36 83 3 
+Zajac 45 23 99 2 31 82 
+Zajac 12 39 90 92 24 62 88 
+Zajac 91 79 60 40 40 65 
+Zajac 86 
+Zajac 65 83 31 38 33 97 63 
+Zajac 45 12 22 82 25 68 
+Zajac 25 32 85 
+Zajac 58 99 45 
+Zajac 72 61 15 66 14 65 93 
+Zajac 74 33 
+Zajac 69 22 78 23 99 
+Zajac 27 58 97 
 Zajac 
-Zajac 49 15 9 
-Zajac 18 67 38 28 44 94 25 
-Zajac 90 97 38 
-Zajac 40 70 70 8 52 14 78 
-Zajac 16 
-Zajac 94 53 17 
-Zajac 51 48 79 28 57 
-Zajac 6 87 21 26 97 80 90 7 61 
+Zajac 60 87 8 41 83 44 71 
+Zajac 50 45 
 Zajac 
-Zajac 8 8 0 18 27 25 98 97 
-Zajac 11 46 55 58 78 
-Zajac 37 47 
-Zajac 61 20 
-Zajac 35 
-Zajac 22 58 11 60 82 
-Zajac 14 78 
+Zajac 99 5 21 62 26 36 37 37 97 
+Zajac 42 48 73 36 31 64 5 78 91 
+Zajac 54 
+Zajac 66 10 44 
+Zajac 
+Zajac 6 27 24 17 40 40 
+Zajac 34 93 96 87 11 45 16 31 34 
+Zajac 31 20 15 2 66 23 0 
+Zajac 67 16 78 95 56 
+Zajac 45 59 48 15 8 1 33 46 
+Zajac 92 60 29 76 70 55 94 
+Zajac 56 58 52 43 71 83 93 
+Zajac 71 93 19 29 
+Zajac 11 44 85 81 69 
+Zajac 32 72 4 3 57 22 
+Zajac 4 55 99 32 36 
+Zajac 98 68 20 44 
+Zajac 34 52 2 69 14 
+Zajac 78 99 61 84 
+Zajac 5 26 
+Zajac 72 97 13 49 67 
+Zajac 67 45 45 36 5 85 83 
+Zajac 22 99 
+Zajac 96 26 0 52 
+Zajac 88 83 94 86 94 
+Zajac 56 50 40 
+Zajac 49 
+Zajac 82 36 14 32 34 
+Zajac 49 58 25 4 
+Zajac 38 96 83 84 64 98 
+Zajac 79 9 61 80 17 61 98 53 
+Zajac 72 77 
+Zajac 63 79 36 52 
+Zajac 12 
+Zajac 84 80 92 43 99 38 8 51 18 
+Zajac 18 24 49 
+Zajac 9 24 86 30 72 21 18 77 
+Zajac 55 84 81 47 
+Zajac 89 81 19 
+Zajac 78 89 38 
+Zajac 72 51 8 61 37 
+Zajac 
+Zajac 43 
+Zajac 
+Zajac 61 84 38 86 43 52 
+Zajac 30 93 72 58 51 30 20 
+Zajac 93 25 
+Zajac 
+Zajac 69 44 82 
+Zajac 4 56 
+Zajac 28 30 2 59 
+Zajac 22 64 35 56 16 43 
+Zajac 76 
+Zajac 71 78 
+Zajac 
+Zajac 27 89 9 91 27 25 1 20 3 
+Zajac 90 88 
+Zajac 58 62 82 35 40 18 
+Zajac 15 12 80 25 55 
+Zajac 25 
+Zajac 15 3 69 62 19 59 24 62 84 
+Zajac 44 49 18 53 60 84 
+Zajac 
+Zajac 1 
+Zajac 27 89 23 70 37 39 38 
+Zajac 3 93 73 85 52 61 27 95 
+Zajac 15 24 55 85 49 30 37 70 
+Zajac 60 31 86 
+Zajac 23 45 8 41 40 62 82 20 
+Zajac 58 60 
 Zajac 
 Zajac 
-Zajac 10 77 87 28 3 8 51 
-Zajac 13 40 10 2 23 0 81 60 39 
-Zajac 97 97 64 75 16 96 76 79 4 
-Zajac 6 91 36 90 81 70 
-Zajac 
-Zajac 58 5 43 98 22 14 40 
-Zajac 
-Zajac 
-Zajac 
-Zajac 
-Zajac 
-Zajac 76 67 19 85 7 
-Zajac 
-Zajac 
-Zajac 68 50 85 14 27 16 25 29 1 
-Zajac 23 55 46 6 74 58 21 10 30 
-Zajac 50 51 
-Zajac 
-Zajac 
-Zajac 
-Zajac 99 87 38 
-Zajac 98 30 
-Zajac 18 
-Zajac 93 28 80 32 81 
-Zajac 46 44 37 50 38 20 77 47 11 
+Zajac 34 47 32 31 60 39 17 69 45 
+Zajac 13 39 86 36 44 94 

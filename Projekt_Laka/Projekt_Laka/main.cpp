@@ -21,9 +21,7 @@ int main(int argc, char **argv)
 	getParameters(argc, argv,input,output,w,mounthNumber,k,r);
 	
 	ifstream inputFile; 
-//	inputFile.open(input, ios::in);
 	ofstream outputFile;
-	outputFile.open(output, ios::out);
 	
 	Laka * laka = new Laka(k, w, r, mounthNumber);
 
@@ -31,8 +29,9 @@ int main(int argc, char **argv)
 
 	laka->Symyluj();
 
-    //cout<<"HELLO!";
-
+	outputFile.open(output, ios::out);
+	cout << laka;
+	outputFile.close();
 
 	return 0;
 

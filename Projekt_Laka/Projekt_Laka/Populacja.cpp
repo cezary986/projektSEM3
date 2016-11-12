@@ -6,6 +6,10 @@
 
 #include <iostream>
 
+Populacja::Populacja(string spieceID) : spieceID(spieceID)
+{}
+
+
 //Funkcja obslugujaca pojedyncze rozmnazanie w populacji
 void Populacja::breed(int k,float r)
 {
@@ -128,5 +132,19 @@ void Populacja::randomPairs(int k,float r)
 	}
 }
 
+ostream& operator<< (ostream &output, Populacja const& ex)
+{
+	for (auto i = ex.males.begin(); i != ex.males.end(); ++i)
+	{
+		output << ex.spieceID;
+		output << &i;
+	}
+	for (auto i = ex.females.begin(); i != ex.females.end(); ++i)
+	{
+		output << ex.spieceID;
+		output << &i;
+	}
 
+	return output;
+}
 

@@ -13,6 +13,9 @@
 #define MYSZOLOWY_F 4
 #define MYSZY_F 1
 #define ZAJACE_F 2
+//Ile je, dany gatunek
+#define MYSZOLOW_FOOD 5
+#define JASTRZAB_FOOD 2
 
 #define PARAMSNUMBER 6
 

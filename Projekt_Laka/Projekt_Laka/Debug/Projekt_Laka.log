@@ -1,5 +1,4 @@
-﻿  Populacja.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(77): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(87): warning C4018: '<': signed/unsigned mismatch
+﻿  Zwierze.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\zwierze.cpp(35): warning C4018: '<': signed/unsigned mismatch
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)

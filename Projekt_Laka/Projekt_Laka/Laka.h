@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include "Populacja.h"
+#include <typeinfo>
 
 class Laka {
 	int k;//ile sie losuje
@@ -21,10 +22,14 @@ protected:
 	Populacja* Myszy;
 	Populacja* Zajace;
 
+	void feed(Populacja * whosEating, Populacja *whosEaten, int howMany);
+	void crossBreed(Populacja *, Populacja*, ANIMALS childType);
+
 public:
 	Laka(int sk, float sw, float sr, int smn);
 	void Symyluj();
 	bool CreatePop(ifstream &sfile, string filename);
+	friend ostream& operator<< (ostream &wyjscie, Laka const& ex);
 };
 
 #endif // LAKA_H_INCLUDED

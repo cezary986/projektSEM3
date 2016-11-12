@@ -10,6 +10,7 @@ class Populacja
 {
 	friend class Laka;
 protected:
+	const string spieceID;
 	vector <Zwierze*> males;
 	vector <Zwierze*> females;
 
@@ -19,10 +20,13 @@ protected:
 
 	vector <Pair*> pairs;//vector na wylosowane do rozmnazania sie pary
 public:
+	Populacja(string spieceID);
 	bool breedable;
 	void breed(int, float);
 	void survive(float);
 	void randomPairs(int, float);
+	friend ostream& operator<< (ostream& output, Populacja const& ex);
+
 	//void loadAnimal (vector <int>);
 	//void addAnimals(struct Pair*);
 };

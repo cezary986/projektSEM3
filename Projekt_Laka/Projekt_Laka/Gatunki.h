@@ -27,12 +27,16 @@ class Mul : public Zwierze
 
 class Jastrzab : public Zwierze
 {
+	int howMuchEat = JASTRZAB_FOOD;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
+	//void eat();
 };
 
 class Myszolow : public  Zwierze
 {
+	int howMuchEat = MYSZOLOW_FOOD;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
+	//void eat();
 };
 
 class Zajac : public Zwierze

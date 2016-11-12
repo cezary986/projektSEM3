@@ -13,13 +13,13 @@ Laka::Laka(int sk, float sw, float sr, int mn)
 	r = sr;
 	monthsNumber = mn;
 
-	Konie = new Populacja();
-	Osly = new Populacja();
-	Muly = new Populacja();
-	Jastrzebie= new Populacja();
-	Myszolowy = new Populacja();
-	Myszy = new Populacja();
-	Zajace = new Populacja();
+	Konie = new Populacja("Kon");
+	Osly = new Populacja("Osiol");
+	Muly = new Populacja("Mul");
+	Jastrzebie= new Populacja("Jastrzab");
+	Myszolowy = new Populacja("Myszolow");
+	Myszy = new Populacja("Mysz");
+	Zajace = new Populacja("Zajac");
 
 	//1 - moze sie rozmnazac, 0 - nie moze
 	Muly->breedable = 1;
@@ -184,52 +184,53 @@ void Laka::Symyluj()
 		if (mounth % KONIE_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM KONIE:\n";
+			//cout << "ROZMNAZAM KONIE:\n";
 			//#########
 			this->Konie->breed(this->k, this->r);
 		}
 		if (mounth % OSLY_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM OSLY:\n";
+			//cout << "ROZMNAZAM OSLY:\n";
 			//#########
 			this->Osly->breed(this->k, this->r);
 		}
 		if (mounth % MULY_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM MULY:\n";
+			//cout << "ROZMNAZAM MULY:\n";
 			//#########
 			this->Muly->breed(this->k, this->r);
 		}
 		if (mounth % JASTRZEBIE_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM JASTRZEBIE:\n";
+			//cout << "ROZMNAZAM JASTRZEBIE:\n";
 			//#########
 			this->Jastrzebie->breed(this->k, this->r);
 		}
 		if (mounth % MYSZOLOWY_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM MYSZOLOWY:\n";
+			//cout << "ROZMNAZAM MYSZOLOWY:\n";
 			//#########
 			this->Myszolowy->breed(this->k,this->r);
 		}
 		if (mounth % MYSZY_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM MYSZY:\n";
+			//cout << "ROZMNAZAM MYSZY:\n";
 			//#########
 			this->Myszy->breed(this->k, this->r);
 		}
 		if (mounth % ZAJACE_F == 0)
 		{
 			//#############
-			cout << "ROZMNAZAM ZAJACE:\n";
+			//cout << "ROZMNAZAM ZAJACE:\n";
 			//#########
 			this->Zajace->breed(this->k, this->r);
 		}
+//Sprawdzenie przezycia
 		this->Konie->survive(this->w);
 		this->Osly->survive(this->w);
 		this->Muly->survive(this->w);
@@ -237,6 +238,9 @@ void Laka::Symyluj()
 		this->Myszolowy->survive(this->w);
 		this->Myszy->survive(this->w);
 		this->Zajace->survive(this->w);
+//Pozywianie sie
+		this->feed(this->Myszolowy,this->Myszy, MYSZOLOW_FOOD);
+		this->feed(this->Jastrzebie, this->Zajace, JASTRZAB_FOOD);
 	}
 	//#############
 	cout << "STAN LAKI:\n";
@@ -248,4 +252,118 @@ void Laka::Symyluj()
 	cout << "Myszy - " << this->Myszy->males.size() + this->Myszy->females.size() << endl;
 	cout << "Zajace - " << this->Zajace->males.size() + this->Zajace->females.size() << endl;
 	//#########
+}
+
+void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
+{
+	int indexFemales =0;
+	int indexMales =0;
+	GENDER genderOfEaten;
+	int indexOfEaten;
+
+	if ((whosEating->females.size() == 0 && whosEating->males.size() == 0))
+	{
+	//Nie ma kto jesc koncze
+		return;
+	}
+	if((whosEaten->females.size() == 0 && whosEaten->males.size() ==0) ||
+	  (whosEaten->females.size() + whosEaten->males.size() < how_many))
+	{
+	//Nie ma co jesc wszyscy gina
+		whosEating->females.clear();
+		whosEating->males.clear();
+		return;
+	}
+//Dla kazdej samicy i samce (naprzemian)
+		while (indexFemales <= whosEating->females.size() || indexMales <= whosEating->males.size())
+		{
+	//Tyle razy ile ma byc zjedzonych zwierzat
+			for (int i = 0; i < how_many; i++)
+			{	
+				//sprawdzam czy nie zabraklo jedzenia
+				if (whosEaten->females.size() == 0 && whosEaten->males.size() == 0)
+				{
+					//Nie ma co jesc wszyscy gina
+					whosEating->females.clear();
+					whosEating->males.clear();
+					return;
+				}
+				//losuje plec
+				genderOfEaten = GENDER(rand() % 2);
+
+				if (whosEaten->males.size() == 0)
+				{
+					genderOfEaten = FEMALE;
+				}
+				if (whosEaten->females.size() != 0)
+				{
+					genderOfEaten = MALE;
+				}
+				if (whosEaten->males.size() == 0)
+				{
+					if (genderOfEaten == MALE)
+					{	//losuje samca do zjedzenia
+						indexOfEaten = rand() % whosEaten->males.size();
+						//usuwam zjedzonego
+						whosEaten->males.erase(whosEaten->males.begin() + indexOfEaten);
+					}
+				}
+				if (whosEaten->females.size() != 0)
+				{
+					if (genderOfEaten == FEMALE)
+					{	//losuje samice do zjedzenia
+						indexOfEaten = rand() % whosEaten->females.size();
+						//usuwam zjedzonego
+						whosEaten->females.erase(whosEaten->females.begin() + indexOfEaten);
+					}
+				}
+			}
+		//	
+			//if (indexFemales != whosEating->females.size())
+			//{
+				indexFemales++;
+			//}
+			//if (indexMales != whosEating->males.size())
+			//{
+				indexMales++;
+			//}
+		}
+}
+
+void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
+{
+	first->femalesToBreed = first->females;
+	first->malesToBreed = first->males;
+	second->femalesToBreed = second->females;
+	second->malesToBreed = second->males;
+	
+	first->randomPairs(this->k, this->r);
+	second->randomPairs(this->k, this->r);
+
+
+	switch (int(childType))
+	{
+	case int(MUL) :
+		for(auto i = first->
+		Mul * cub = new Mul();
+		cub->sex = GENDER(rand() % 2);
+		cub = ()->female->born((*i)->female->chromosome, (*i)->male->chromosome);
+
+		break;
+	}
+
+}
+
+
+ostream& operator<< (ostream &output, Laka const& laka)
+{
+	output << laka.Konie;
+	output << laka.Osly;
+	output << laka.Muly;
+	output << laka.Jastrzebie;
+	output << laka.Myszolowy;
+	output << laka.Myszy;
+	output << laka.Zajace;
+
+	return output;
 }

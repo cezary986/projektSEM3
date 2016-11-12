@@ -20,7 +20,7 @@ bool Zwierze::checkBreeding(float r)
 {
 	float f = float(rand() % randmax) / 10;//dzielenie zeby uzyskac liczbe [0,1]
 	//Cialo funkcji dopadowania przyjmijmy ze to rand()
-	if (f < r)
+	if (f > r)
 	{
 		return false;//nie rozmnaza sie
 	}
@@ -28,6 +28,16 @@ bool Zwierze::checkBreeding(float r)
 	{
 		return true;//rozmanaza sie
 	}
+}
+
+ostream& operator<< (ostream & output, Zwierze const& ex)
+{
+	for (int i = 0; i < ex.chromosome.size(); i++)
+	{
+		output << ex.chromosome[i] << " gg";
+	}
+	output << "\n";
+	return output;
 }
 
 
