@@ -4,7 +4,6 @@
 #include <ctime>
 #include <cstdlib>
 #include <fstream>
-
 #include "getParameters.h"
 #include "Laka.h"
 
@@ -13,16 +12,16 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-	srand(time(nullptr));
-	//zmienne z wartoœciami prze³¹czników
+	srand(time(NULL));
+	//zmienne z wartoœciami przelaczników
 	string input, output;
 	int mounthNumber, k;
 	float w, r;
-	//funkcja dla sprawdzenia poprawnoœci prze³aczników i przypisuje im podane nazwy
+	//funkcja dla sprawdzenia i przypisywania parametrom wartosci
 	getParameters(argc, argv,input,output,w,mounthNumber,k,r);
 	
 	ifstream inputFile; 
-	inputFile.open(input, ios::in);
+//	inputFile.open(input, ios::in);
 	ofstream outputFile;
 	outputFile.open(output, ios::out);
 	
@@ -30,7 +29,9 @@ int main(int argc, char **argv)
 
 	laka->CreatePop(inputFile, input);
 
-    cout<<"HELLO!";
+	laka->Symyluj();
+
+    //cout<<"HELLO!";
 
 
 	return 0;

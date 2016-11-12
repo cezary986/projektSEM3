@@ -114,6 +114,7 @@
     <ClCompile Include="Laka.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="getParameters.cpp" />
+    <ClCompile Include="Populacja.cpp" />
     <ClCompile Include="Zwierze.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -123,9 +124,6 @@
     <ClInclude Include="Populacja.h" />
     <ClInclude Include="getParameters.h" />
     <ClInclude Include="Zwierze.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Populacja.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

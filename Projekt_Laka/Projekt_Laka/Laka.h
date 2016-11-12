@@ -23,7 +23,7 @@ protected:
 
 public:
 	Laka(int sk, float sw, float sr, int smn);
-	void Symyluj(int monthsNumber);
+	void Symyluj();
 	bool CreatePop(ifstream &sfile, string filename);
 };
 

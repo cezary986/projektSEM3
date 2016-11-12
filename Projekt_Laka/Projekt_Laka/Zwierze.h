@@ -6,6 +6,9 @@
 #include <ctime>
 #include <cstdlib>
 
+
+using namespace std;
+
 //enum na plec zwierzat
 enum GENDER {MALE, FEMALE};
 
@@ -20,8 +23,8 @@ protected:
 public:
 	GENDER sex;
 	vector <int> chromosome;
-	bool checkSurvival(int w);
-	bool checkBreeding(int r);
+	bool checkSurvival(float w);
+	bool checkBreeding(float r);
 	virtual Zwierze* born(vector<int>,vector<int>) =0;
 };
 

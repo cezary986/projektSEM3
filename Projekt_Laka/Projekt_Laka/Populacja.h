@@ -2,15 +2,14 @@
 #define POPULACJA_H_INCLUDED
 
 #include <vector>
-#include "declarations.h"
-#include "Zwierze.h"
+#include "Gatunki.h"
+
+
 
 class Populacja
 {
 	friend class Laka;
 protected:
-	ANIMALS spiece;
-
 	vector <Zwierze*> males;
 	vector <Zwierze*> females;
 
@@ -21,10 +20,10 @@ protected:
 	vector <Pair*> pairs;//vector na wylosowane do rozmnazania sie pary
 public:
 	bool breedable;
-	void breed(vector <Pair*>, int, float);
-	void survive(int);
-	void randomPairs(int, int);
-	void loadAnimal (vector <int>);
+	void breed(int, float);
+	void survive(float);
+	void randomPairs(int, float);
+	//void loadAnimal (vector <int>);
 	//void addAnimals(struct Pair*);
 };
 

@@ -2,9 +2,9 @@
 
 #define randmax 10
 
-bool Zwierze::checkSurvival(int w)
+bool Zwierze::checkSurvival(float w)
 {
-	float f = int(rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
+	float f = float(rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
 	//Cialo funkcji dopadowania przyjmijmy ze to rand()
 	if (f < w)
 	{
@@ -16,17 +16,17 @@ bool Zwierze::checkSurvival(int w)
 	}
 }
 
-bool Zwierze::checkBreeding(int r) 
+bool Zwierze::checkBreeding(float r) 
 {
-	float f = (rand() % randmax) / 10;//dzielenie zeby uzyskac liczbe [0,1]
+	float f = float(rand() % randmax) / 10;//dzielenie zeby uzyskac liczbe [0,1]
 	//Cialo funkcji dopadowania przyjmijmy ze to rand()
 	if (f < r)
 	{
-		return 0;//nie rozmnaza sie
+		return false;//nie rozmnaza sie
 	}
 	else
 	{
-		return 1;//rozmanaza sie
+		return true;//rozmanaza sie
 	}
 }
 
