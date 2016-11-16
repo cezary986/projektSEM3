@@ -6,6 +6,7 @@
 #include <fstream>
 #include "getParameters.h"
 #include "Laka.h"
+#include <vld.h>
 
 using namespace std;
 

@@ -92,7 +92,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Konie->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Konie->females.push_back(animal);
 				}
@@ -105,7 +105,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Muly->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Muly->females.push_back(animal);
 				}
@@ -118,7 +118,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Jastrzebie->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Jastrzebie->females.push_back(animal);
 				}
@@ -131,7 +131,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Myszolowy->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Myszolowy->females.push_back(animal);
 				}
@@ -144,7 +144,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Myszy->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Myszy->females.push_back(animal);
 				}
@@ -157,7 +157,7 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				{
 					this->Zajace->males.push_back(animal);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					this->Zajace->females.push_back(animal);
 				}
@@ -299,6 +299,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 					{	//losuje samca do zjedzenia
 						indexOfEaten = rand() % whosEaten->males.size();
 						//usuwam zjedzonego
+						 delete whosEaten->males[indexOfEaten];
 						whosEaten->males.erase(whosEaten->males.begin() + indexOfEaten);
 					}
 				}
@@ -308,6 +309,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 					{	//losuje samice do zjedzenia
 						indexOfEaten = rand() % whosEaten->females.size();
 						//usuwam zjedzonego
+						delete whosEaten->females[indexOfEaten];
 						whosEaten->females.erase(whosEaten->females.begin() + indexOfEaten);
 					}
 				}

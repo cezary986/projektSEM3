@@ -42,7 +42,6 @@ ostream& operator<< (ostream & output, Zwierze const& ex)
 	{
 		output << *i << " ";
 	}
-	output << "zle ";
 	return output;
 }
 

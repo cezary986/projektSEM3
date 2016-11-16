@@ -9,6 +9,7 @@ class Kon : public Zwierze
 {
 	friend class Osiol;
 public:
+	~Kon();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
@@ -19,6 +20,7 @@ class Osiol : public Zwierze
 {
 	friend class Kon;
 public:
+	~Osiol();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
@@ -30,6 +32,7 @@ class Mul : public Zwierze
 	friend class Osiol;
 	friend class Kon;
 public:
+	~Mul();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
@@ -38,6 +41,7 @@ public:
 class Jastrzab : public Zwierze
 {
 public:
+	~Jastrzab();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	int howMuchEat = JASTRZAB_FOOD;
@@ -47,6 +51,7 @@ public:
 class Myszolow : public  Zwierze
 {
 public:
+	~Myszolow();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	int howMuchEat = MYSZOLOW_FOOD;
@@ -57,6 +62,7 @@ public:
 class Zajac : public Zwierze
 {
 public:
+	~Zajac();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
@@ -65,6 +71,7 @@ public:
 class Mysz : public Zwierze
 {
 public:
+	~Mysz();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);

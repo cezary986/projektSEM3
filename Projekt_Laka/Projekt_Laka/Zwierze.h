@@ -20,7 +20,7 @@ class Zwierze
 protected:
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 public:
-	~Zwierze();
+	virtual ~Zwierze() = 0;
 	GENDER sex;
 	vector <int> chromosome;
 	bool checkSurvival(float w);

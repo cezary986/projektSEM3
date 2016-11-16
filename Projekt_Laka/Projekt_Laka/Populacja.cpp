@@ -13,6 +13,30 @@ Populacja::Populacja(string ID) : spieceID(ID)
 
 Populacja::~Populacja()
 {
+	//for (auto i = males.begin(); i != males.end(); ++i)
+	//{
+	//	delete *i;
+	//}
+
+	//for (auto i = femalesToBreed.begin(); i != femalesToBreed.end(); ++i)
+	//{
+	//	delete *i;
+	//}
+	//for (auto i = females.begin(); i != females.end(); ++i)
+	//{
+	//	if (*i != nullptr)
+	//	{
+	//		delete *i;
+	//		*i = nullptr;
+	//	}
+
+	
+
+	/*for (auto i = pairs.begin(); i != pairs.end(); ++i)
+	{
+		delete *i;
+	}
+*/
 	males.clear();
 	females.clear();
 	malesToBreed.clear();
@@ -62,7 +86,7 @@ void Populacja::breed(int k,float r)
 					//#########
 					this->males.push_back(cub);
 				}
-				else
+				if (gender == FEMALE)
 				{
 					//#############
 					//cout << "Nowe zwierze samica!\n";
@@ -99,7 +123,7 @@ void Populacja::survive(float w)
 		if (this->females[i]->checkSurvival(w) == false)
 		{
 			//zwierze zdycha
-			//delete this->females[i];
+			delete this->females[i];
 			this->females.erase(this->females.begin() + i);
 		}
 	}
@@ -109,7 +133,7 @@ void Populacja::survive(float w)
 		if (this->males[i]->checkSurvival(w) == false)
 		{
 			//zwierze zdycha
-			//delete this->males[i];
+			delete this->males[i];
 			this->males.erase(this->males.begin() + i);
 		}
 	}
