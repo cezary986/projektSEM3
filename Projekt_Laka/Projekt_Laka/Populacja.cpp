@@ -3,12 +3,27 @@
 #include <cstdlib>
 #include <algorithm>
 #include <vector>
+#include <string>
 
 #include <iostream>
 
-Populacja::Populacja(string spieceID) : spieceID(spieceID)
-{}
+Populacja::Populacja(string ID) : spieceID(ID)
+{
+}
 
+Populacja::~Populacja()
+{
+	males.clear();
+	females.clear();
+	malesToBreed.clear();
+	femalesToBreed.clear();
+	pairs.clear();
+	//delete_vector_el(males);
+	//delete_vector_el(females);
+	//delete_vector_el(malesToBreed);
+	//delete_vector_el(femalesToBreed);
+	//delete_vector_el(pairs);
+}
 
 //Funkcja obslugujaca pojedyncze rozmnazanie w populacji
 void Populacja::breed(int k,float r)
@@ -39,6 +54,7 @@ void Populacja::breed(int k,float r)
 			{
 				gender = GENDER(rand() % 2);
 				cub = (*i)->female->born((*i)->female->chromosome, (*i)->male->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
+
 				if (gender == MALE)
 				{
 					//#############
@@ -78,7 +94,7 @@ void Populacja::breed(int k,float r)
 void Populacja::survive(float w)
 {	
 	//sprawdzam dla samic
-	for(int i = 0; i < this->females.size(); i++)
+	for(int i = 0; i < signed(this->females.size()); i++)
 	{
 		if (this->females[i]->checkSurvival(w) == false)
 		{
@@ -108,7 +124,6 @@ void Populacja::randomPairs(int k,float r)
 		//Zabraklo samcow lub samic do losowania
 		if (this->femalesToBreed.size() == 0 || this->malesToBreed.size() == 0)
 		{
-			cout << "nie mam kogo rozmanzac\n";
 			return;//koncze losowanie
 		}
 		Pair * temp = new Pair;
@@ -136,15 +151,14 @@ ostream& operator<< (ostream &output, Populacja const& ex)
 {
 	for (auto i = ex.males.begin(); i != ex.males.end(); ++i)
 	{
-		output << ex.spieceID;
-		output << &i;
+		output << ex.spieceID<< " ";
+		output <<*(*i) << "\n";
 	}
 	for (auto i = ex.females.begin(); i != ex.females.end(); ++i)
 	{
-		output << ex.spieceID;
-		output << &i;
+		output << ex.spieceID << " ";
+		output << *(*i) <<"\n";
 	}
-
 	return output;
 }
 

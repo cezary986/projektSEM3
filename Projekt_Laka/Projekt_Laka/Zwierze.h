@@ -16,12 +16,11 @@ enum GENDER {MALE, FEMALE};
 class Zwierze
 {
 	friend class Populacja;
+	friend class Laka;
 protected:
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
-	int breedFreq;//czestotliwosc rozmnazania sie w miesiacach
-	float momsPart;//ile chromosomu bierze od matki
-	float dadsPart;
 public:
+	~Zwierze();
 	GENDER sex;
 	vector <int> chromosome;
 	bool checkSurvival(float w);

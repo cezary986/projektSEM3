@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions.cpp" />
     <ClCompile Include="Gatunki.cpp" />
     <ClCompile Include="Laka.cpp" />
     <ClCompile Include="main.cpp" />
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declarations.h" />
+    <ClInclude Include="functions.h" />
     <ClInclude Include="Gatunki.h" />
     <ClInclude Include="Laka.h" />
     <ClInclude Include="Populacja.h" />

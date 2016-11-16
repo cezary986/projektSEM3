@@ -1,4 +1,16 @@
-﻿  Zwierze.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\zwierze.cpp(35): warning C4018: '<': signed/unsigned mismatch
+﻿  Populacja.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(107): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  Laka.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(264): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(272): warning C4018: '<=': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(340): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(344): warning C4018: '>=': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(366): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(368): warning C4018: '>=': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
   Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)

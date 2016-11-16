@@ -9,10 +9,31 @@
 
 using namespace std;
 
+double Kon::momsPart = KON_MOM_PART;
+double Kon::dadsPart = KON_DAD_PART;
+
+double Osiol::momsPart = OSIOL_MOM_PART;
+double Osiol::dadsPart = OSIOL_DAD_PART;
+
+double Mul::momsPart = MUL_MOM_PART;
+double Mul::dadsPart = MUL_DAD_PART;
+
+double Jastrzab::momsPart = JASTRZAB_MOM_PART;
+double Jastrzab::dadsPart = JASTRZAB_DAD_PART;
+
+double Myszolow::momsPart = MYSZOLOW_MOM_PART;
+double Myszolow::dadsPart = MYSZOLOW_DAD_PART;
+
+double Mysz::momsPart = MYSZ_MOM_PART;
+double Mysz::dadsPart = MYSZ_DAD_PART;
+
+double Zajac::momsPart = ZAJAC_MOM_PART;
+double Zajac::dadsPart = ZAJAC_DAD_PART;
+
 
 int main(int argc, char **argv)
 {
-	srand(time(NULL));
+	srand(time(nullptr));
 	//zmienne z wartoœciami przelaczników
 	string input, output;
 	int mounthNumber, k;
@@ -30,9 +51,9 @@ int main(int argc, char **argv)
 	laka->Symyluj();
 
 	outputFile.open(output, ios::out);
-	cout << laka;
+	outputFile << *laka;
 	outputFile.close();
-
+	delete laka;
 	return 0;
 
 }

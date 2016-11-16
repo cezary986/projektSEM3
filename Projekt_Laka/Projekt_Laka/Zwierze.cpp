@@ -2,6 +2,12 @@
 
 #define randmax 10
 
+Zwierze::~Zwierze()
+{
+	chromosome.clear();
+}
+
+
 bool Zwierze::checkSurvival(float w)
 {
 	float f = float(rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
@@ -32,11 +38,11 @@ bool Zwierze::checkBreeding(float r)
 
 ostream& operator<< (ostream & output, Zwierze const& ex)
 {
-	for (int i = 0; i < ex.chromosome.size(); i++)
+	for (auto i = ex.chromosome.begin(); i != ex.chromosome.end(); ++i)
 	{
-		output << ex.chromosome[i] << " gg";
+		output << *i << " ";
 	}
-	output << "\n";
+	output << "zle ";
 	return output;
 }
 

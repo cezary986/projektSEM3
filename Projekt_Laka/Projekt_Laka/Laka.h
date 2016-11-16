@@ -27,6 +27,7 @@ protected:
 
 public:
 	Laka(int sk, float sw, float sr, int smn);
+	~Laka();
 	void Symyluj();
 	bool CreatePop(ifstream &sfile, string filename);
 	friend ostream& operator<< (ostream &wyjscie, Laka const& ex);
