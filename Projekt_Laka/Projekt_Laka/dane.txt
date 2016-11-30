@@ -1,56 +1,56 @@
-Kon 88 
-Kon 20 77 17 96 64 2 91 63 57 
-Kon 11 
-Kon 96 32 27 28 25 97 33 34 
-Kon 68 28 38 8 4 
-Kon 67 58 31 81 95 64 4 
-Kon 94 99 56 83 44 28 62 11 64 
-Kon 12 43 
-Osiol 81 16 91 57 81 95 0 45 0 
-Osiol 24 73 86 41 43 
-Osiol 89 78 
-Osiol 53 89 86 93 59 94 66 87 
-Osiol 86 59 85 64 14 
-Osiol 80 91 36 38 63 43 83 
-Osiol 99 78 15 74 34 46 4 
-Osiol 
-Mul 83 9 92 10 61 87 80 55 
-Mul 84 91 27 
-Mul 45 73 46 
-Mul 83 22 77 51 
-Mul 26 87 59 
-Mul 80 82 16 5 88 78 38 71 
-Mul 27 42 65 90 11 
-Mul 22 66 15 27 81 46 86 32 72 
-Jastrzab 62 95 95 14 74 76 
-Jastrzab 62 15 44 79 52 95 99 36 
-Jastrzab 
-Jastrzab 
-Jastrzab 41 14 99 61 93 60 
-Jastrzab 60 
-Jastrzab 19 13 31 
-Jastrzab 90 74 69 
-Myszolow 12 33 77 28 97 
-Myszolow 76 71 92 73 98 32 17 9 9 
-Myszolow 28 52 
-Myszolow 37 19 97 49 27 47 
-Myszolow 51 57 10 33 70 90 
-Myszolow 48 
-Myszolow 15 
-Myszolow 96 33 16 90 14 51 62 
-Mysz 15 54 2 3 8 
-Mysz 61 73 40 0 72 46 84 58 
-Mysz 43 59 
-Mysz 35 95 56 18 83 59 28 71 
-Mysz 28 69 98 39 29 
-Mysz 67 1 71 97 41 82 61 
-Mysz 15 
-Mysz 61 65 95 93 0 36 89 67 
-Zajac 71 
-Zajac 67 97 38 46 95 13 
-Zajac 62 47 13 83 50 96 28 
-Zajac 58 27 68 92 75 
-Zajac 95 4 33 70 41 
-Zajac 51 27 76 95 26 15 82 
-Zajac 53 53 50 4 88 13 98 82 
-Zajac 87 63 18 59 
+Kon 30 27 
+Kon 16 85 62 99 40 69 93 
+Kon 4 39 51 75 50 43 70 
+Kon 54 56 17 13 8 
+Kon 11 4 74 94 
+Kon 86 40 
+Kon 79 13 54 
+Kon 52 
+Osiol 46 5 47 14 
+Osiol 44 
+Osiol 75 88 89 87 76 97 95 87 
+Osiol 99 5 
+Osiol 22 98 96 9 33 69 72 
+Osiol 9 44 33 65 
+Osiol 77 20 18 50 35 94 16 35 
+Osiol 60 26 51 5 15 37 4 84 70 
+Mul 59 82 98 46 
+Mul 18 66 79 86 32 39 65 
+Mul 14 37 97 22 
+Mul 2 8 68 16 83 27 80 78 85 
+Mul 6 15 73 23 71 20 8 79 83 
+Mul 4 3 36 0 39 76 93 
+Mul 21 16 
+Mul 46 75 41 36 2 62 75 2 
+Jastrzab 93 65 79 4 
+Jastrzab 99 10 
+Jastrzab 93 34 
+Jastrzab 83 11 49 51 33 68 
+Jastrzab 85 82 7 92 82 35 
+Jastrzab 24 80 55 6 29 
+Jastrzab 86 54 17 97 75 68 16 
+Jastrzab 17 77 63 66 19 50 
+Myszolow 19 87 87 68 80 68 
+Myszolow 80 11 48 82 88 97 20 67 61 
+Myszolow 97 4 87 
+Myszolow 11 15 85 50 80 10 
+Myszolow 37 83 58 79 96 54 79 70 13 
+Myszolow 75 16 19 55 81 
+Myszolow 25 33 36 60 97 61 8 49 
+Myszolow 13 45 34 18 70 
+Mysz 23 89 35 15 68 39 61 85 
+Mysz 31 39 69 
+Mysz 54 33 4 64 90 14 78 17 
+Mysz 22 50 34 70 
+Mysz 21 32 86 
+Mysz 97 68 36 55 4 
+Mysz 98 73 
+Mysz 34 68 
+Zajac 22 65 67 58 42 16 30 67 33 
+Zajac 98 96 
+Zajac 7 88 83 12 58 0 9 68 
+Zajac 76 75 54 0 94 
+Zajac 86 21 35 
+Zajac 73 43 72 45 76 29 
+Zajac 19 80 85 
+Zajac 70 14 91 5 19 

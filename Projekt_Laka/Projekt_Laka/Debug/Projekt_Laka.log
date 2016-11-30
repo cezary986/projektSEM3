@@ -1,4 +1,27 @@
-﻿  Populacja.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(131): warning C4018: '<': signed/unsigned mismatch
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)
+﻿  Gatunki.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(28): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(63): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(99): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(137): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(173): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(208): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(244): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  main.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\main.cpp(37): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  functions.cpp
+  Zwierze.cpp
+  Populacja.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(51): error C2039: 'born': is not a member of 'Zwierze'
+  c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\zwierze.h(17): note: see declaration of 'Zwierze'
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(94): warning C4018: '<': signed/unsigned mismatch
+  Laka.cpp
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(255): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(263): warning C4018: '<=': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(333): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(337): warning C4018: '>=': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(357): warning C4018: '<': signed/unsigned mismatch
+c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\laka.cpp(359): warning C4018: '>=': signed/unsigned mismatch
+  Generating Code...

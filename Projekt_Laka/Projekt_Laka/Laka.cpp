@@ -53,7 +53,6 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 	string gatunek;
 	string temp;
 	vector <int> chrom;
-	GENDER gender;
 
 	if (sfile.good())
 	{
@@ -69,95 +68,87 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 			Zwierze * animal;
 
 			//Losuje plec bo nie podaje sie jej w pliku
-			gender = GENDER(rand() % 2);
 			//Sprawdzam gatunek i dodaje do populacji
 			if (gatunek == "Osiol")
 			{
-				animal = new Osiol();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Osiol(chrom);
+				if (animal->isMale())
 				{
 					this->Osly->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Osly->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Kon")
 			{
-				animal = new Kon();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Kon(chrom);
+				if (animal->isMale())
 				{
 					this->Konie->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Konie->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Mul")
 			{
-				animal = new Mul();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Mul(chrom);
+				if (animal->isMale())
 				{
 					this->Muly->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Muly->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Jastrzab")
 			{
-				animal = new Jastrzab();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Jastrzab(chrom);
+				if (animal->isMale())
 				{
 					this->Jastrzebie->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Jastrzebie->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Myszolow")
 			{
-				animal = new Myszolow();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Myszolow(chrom);
+				if (animal->isMale())
 				{
 					this->Myszolowy->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Myszolowy->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Mysz")
 			{
-				animal = new Mysz();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Mysz(chrom);
+				if (animal->isMale())
 				{
 					this->Myszy->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Myszy->females.push_back(animal);
 				}
 			}
 			if (gatunek == "Zajac")
 			{
-				animal = new Zajac();
-				animal->chromosome = chrom;
-				if (gender == MALE)
+				animal = new Zajac(chrom);
+				if (animal->isMale())
 				{
 					this->Zajace->males.push_back(animal);
 				}
-				if (gender == FEMALE)
+				if (animal->isFemale())
 				{
 					this->Zajace->females.push_back(animal);
 				}
@@ -349,14 +340,12 @@ void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 				}
 				female = second->femalesToBreed[i];//dobieram samice z drugiego
 				male = first->males[i];
-				Zwierze * cub = new Mul();
-				cub = cub->born(female->chromosome, male->chromosome);
-				cub->sex = GENDER(rand() % 2);
-				if (cub->sex == MALE)
+				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
+				if (cub->isMale())
 				{
 					this->Muly->males.push_back(cub);
 				}
-				else
+				if(cub->isFemale())
 				{
 					this->Muly->females.push_back(cub);
 				}
@@ -373,14 +362,12 @@ void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 				}
 				female = first->femalesToBreed[i];//dobieram samice z drugiego
 				male = second->males[i];
-				Zwierze * cub = new Mul();
-				cub = cub->born(female->chromosome, male->chromosome);
-				cub->sex = GENDER(rand() % 2);
-				if (cub->sex == MALE)
+				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
+				if (cub->isMale())
 				{
 					this->Muly->males.push_back(cub);
 				}
-				else
+				if (cub->isFemale())
 				{
 					this->Muly->females.push_back(cub);
 				}

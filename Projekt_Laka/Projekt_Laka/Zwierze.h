@@ -19,13 +19,15 @@ class Zwierze
 	friend class Laka;
 protected:
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
-public:
-	virtual ~Zwierze() = 0;
 	GENDER sex;
+public:
+	bool isFemale();
+	bool isMale();
+	GENDER getSex();
+	virtual ~Zwierze() = 0;
 	vector <int> chromosome;
 	bool checkSurvival(float w);
 	bool checkBreeding(float r);
-	virtual Zwierze* born(vector<int>,vector<int>) =0;
 	friend ostream& operator <<(ostream &output, Zwierze const& ex);
 };
 

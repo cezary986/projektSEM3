@@ -54,6 +54,7 @@ int main(int argc, char **argv)
 	outputFile.open(output, ios::out);
 	outputFile << *laka;
 	outputFile.close();
+	
 	delete laka;
 	return 0;
 

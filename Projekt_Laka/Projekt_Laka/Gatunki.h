@@ -9,10 +9,11 @@ class Kon : public Zwierze
 {
 	friend class Osiol;
 public:
+	Kon(vector<int> chrom);
+	Kon(vector<int> dad, vector<int> mom);
 	~Kon();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 	//friend ostream& operator<< (ostream &wyjscie, Kon const& ex);
 };
 
@@ -20,10 +21,11 @@ class Osiol : public Zwierze
 {
 	friend class Kon;
 public:
+	Osiol(vector<int> chrom);
+	Osiol(vector<int> dad, vector<int> mom);
 	~Osiol();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 	//Mul* operator +(const Kon*);
 };
 
@@ -32,49 +34,53 @@ class Mul : public Zwierze
 	friend class Osiol;
 	friend class Kon;
 public:
+	Mul(vector<int> chrom);
+	Mul(vector<int> dad, vector<int> mom);
 	~Mul();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Jastrzab : public Zwierze
 {
 public:
+	Jastrzab(vector<int> chrom);
+	Jastrzab(vector<int> dad, vector<int> mom);
 	~Jastrzab();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	int howMuchEat = JASTRZAB_FOOD;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 class Myszolow : public  Zwierze
 {
 public:
+	Myszolow(vector<int> chrom);
+	Myszolow(vector<int> dad, vector<int> mom);
 	~Myszolow();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
 	int howMuchEat = MYSZOLOW_FOOD;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 	//void eat();
 };
 
 class Zajac : public Zwierze
 {
 public:
+	Zajac(vector<int> chrom);
+	Zajac(vector<int> dad, vector<int> mom);
 	~Zajac();
 	static double momsPart;//ile chromosomu bierze od matki
-	static double dadsPart;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
-};
+	static double dadsPart;};
 
 class Mysz : public Zwierze
 {
 public:
+	Mysz(vector<int> chrom);
+	Mysz(vector<int> dad, vector<int> mom);
 	~Mysz();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
-	Zwierze* born(vector<int> mamsPart, vector <int> dadsPart);
 };
 
 #endif // GATUNKI_H_INCLUDED

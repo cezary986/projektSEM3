@@ -7,67 +7,38 @@
 
 #include <iostream>
 
+//TODO w kazdej populacji w breed trzeba dodac wprowadzanie zmiennej GENDER do obiektu cub
+
 Populacja::Populacja(string ID) : spieceID(ID)
 {
 }
 
 Populacja::~Populacja()
 {
-	//for (auto i = males.begin(); i != males.end(); ++i)
-	//{
-	//	delete *i;
-	//}
-
-	//for (auto i = femalesToBreed.begin(); i != femalesToBreed.end(); ++i)
-	//{
-	//	delete *i;
-	//}
-	//for (auto i = females.begin(); i != females.end(); ++i)
-	//{
-	//	if (*i != nullptr)
-	//	{
-	//		delete *i;
-	//		*i = nullptr;
-	//	}
-
-	
-
-	/*for (auto i = pairs.begin(); i != pairs.end(); ++i)
+	for (auto i = males.begin(); i != males.end(); i++)
 	{
 		delete *i;
+		//males.erase(i);
 	}
-*/
-	males.clear();
-	females.clear();
-	malesToBreed.clear();
-	femalesToBreed.clear();
-	pairs.clear();
-	//delete_vector_el(males);
-	//delete_vector_el(females);
-	//delete_vector_el(malesToBreed);
-	//delete_vector_el(femalesToBreed);
-	//delete_vector_el(pairs);
+	for (auto i = females.begin(); i != females.end(); i++)
+	{
+
+		delete *i;
+		//females.erase(i);
+	}
 }
 
 //Funkcja obslugujaca pojedyncze rozmnazanie w populacji
 void Populacja::breed(int k,float r)
 {
-	this->femalesToBreed.assign(this->females.begin(), this->females.end());
-	this->malesToBreed.assign(this->males.begin(), this->males.end());
-
-	//cout << "Tyle samic do rozmanzania: "<< this->femalesToBreed.size() << " \n";
-	//cout << "Tyle samcow do rozmanzania: "<< this->malesToBreed.size() << " \n";
-
-	//copy(original.begin(), original.end(), back_inserter(newVec));
-	//this->femalesToBreed = this->females;
-	//->malesToBreed = this->males;
-
-	this->randomPairs(k,r);
-
-	GENDER gender;
-
 	if (this->breedable = 1)
 	{
+		this->femalesToBreed = this->females;
+		this->malesToBreed = this->males;
+
+		this->randomPairs(k, r);
+
+		GENDER gender;
 		if (this->pairs.size() != 0)
 		{
 			//ROZMNAZANIE
@@ -77,8 +48,8 @@ void Populacja::breed(int k,float r)
 			for (auto i = this->pairs.begin(); i != this->pairs.end(); ++i) //for (auto i : this->pairs)//pelta dla kazdego elementu vectora
 			{
 				gender = GENDER(rand() % 2);
-				cub = (*i)->female->born((*i)->female->chromosome, (*i)->male->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
-
+				cub = //tworze nowe zwierze na podstawie chromosomow rodzicow
+				//TODO jednak musi byc breed XD nie ma bata
 				if (gender == MALE)
 				{
 					//#############
@@ -95,22 +66,14 @@ void Populacja::breed(int k,float r)
 				}
 			}
 		}
-		//NIE MA KOGO ROZMNAZAC
-		else
-		{//nie ma osobnikow
-			this->malesToBreed.clear();
-			this->femalesToBreed.clear();
-			return;
-		}
-		//CZYSZCZE WEKTORY
-		this->malesToBreed.clear();
-		this->femalesToBreed.clear();
-		this->pairs.clear();
 	}
 	else//gatunek nie rozmnaza sie np muly
 	{
 		return;
 	}
+
+	this->pairs.clear();
+
 }
 
 
@@ -118,7 +81,7 @@ void Populacja::breed(int k,float r)
 void Populacja::survive(float w)
 {	
 	//sprawdzam dla samic
-	for(int i = 0; i < signed(this->females.size()); i++)
+	for(int i = 0; i < this->females.size(); i++)
 	{
 		if (this->females[i]->checkSurvival(w) == false)
 		{

@@ -3,161 +3,256 @@
 //Wszystkie metody born tworza i zwracaja nowe zwierze tego samego typu co rodzic 
 //jego chromosom tworza na podstawie chromosomow rodzicow
 
+Kon::Kon(vector<int> dad, vector<int> mom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
+	{
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
+	}
+	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
+	{
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
+	}
+
+}
+
+Kon::Kon(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 Kon::~Kon()
 {
 	chromosome.clear();
 }
 
-Zwierze * Kon::born(vector<int> mamsPart, vector <int> dadsPart)
+
+Osiol::Osiol(vector<int> dad, vector<int> mom)
 {
-	Zwierze * cub = new Kon;
-	cout << "nowe rozmnazanie: ";
-		//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-		for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
-		{
-			//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
-			cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
-		}
-		//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-		for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
-		{
-			//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
-			cub->chromosome.push_back(mamsPart[i]);
-		}
-		//cout << "\n";
-		cub->sex = GENDER(rand() % 1);//losujemy plec
-		return cub;
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
+	{
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
+	}
+	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
+	{
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
+	}
+
 }
+
+Osiol::Osiol(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Osiol::~Osiol()
 {
 	chromosome.clear();
 }
 
-Zwierze * Osiol::born(vector<int> mamsPart, vector <int> dadsPart)
+
+Mul::Mul(vector<int> dad, vector<int> mom)
 {
-	Zwierze * cub = new Osiol;
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		cub->chromosome.push_back(mamsPart[i]);
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
 	}
-	cub->sex = GENDER(rand() % 1);//losujemy plec
-	return cub;
+
 }
+
+Mul::Mul(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Mul::~Mul()
 {
 	chromosome.clear();
 }
 
-Zwierze * Mul::born(vector<int> mamsPart, vector <int> dadsPart)
+
+//TODO tutaj byl glowny blad born nie zwracalo mula tylko this
+
+Jastrzab::Jastrzab(vector<int> dad, vector<int> mom)
 {
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		this->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		this->chromosome.push_back(mamsPart[i]);
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
 	}
-	this->sex = GENDER(rand() % 1);//losujemy plec
-	return this;
+
 }
+
+Jastrzab::Jastrzab(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Jastrzab::~Jastrzab()
 {
 	chromosome.clear();
 }
 
-Zwierze * Jastrzab::born(vector<int> mamsPart, vector <int> dadsPart)
+
+Myszolow::Myszolow(vector<int> dad, vector<int> mom)
 {
-	Zwierze * cub = new Jastrzab;
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		cub->chromosome.push_back(mamsPart[i]);
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
 	}
-	cub->sex = GENDER(rand() % 1);//losujemy plec
-	return cub;
+
 }
+
+Myszolow::Myszolow(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Myszolow::~Myszolow()
 {
 	chromosome.clear();
 }
 
-Zwierze * Myszolow::born(vector<int> mamsPart, vector <int> dadsPart)
+Mysz::Mysz(vector<int> dad, vector<int> mom)
 {
-	Zwierze * cub = new Myszolow;
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		cub->chromosome.push_back(mamsPart[i]);
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
 	}
-	cub->sex = GENDER(rand() % 1);//losujemy plec
-	return cub;
+
 }
+
+Mysz::Mysz(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Mysz::~Mysz()
 {
 	chromosome.clear();
 }
 
-Zwierze * Mysz::born(vector<int> mamsPart, vector <int> dadsPart)
+
+Zajac::Zajac(vector<int> dad, vector<int> mom)
 {
-	Zwierze * cub = new Mysz;
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
+		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
+		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
+	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		cub->chromosome.push_back(mamsPart[i]);
+		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
+		chromosome.push_back(mom[i]);
 	}
-	cub->sex = GENDER(rand() % 1);//losujemy plec
-	return cub;
+
 }
+
+Zajac::Zajac(vector<int> chrom)
+{
+	sex = GENDER(rand() % 2);
+
+	for (int i = 0; i < chrom.size(); i++)
+	{
+		chromosome.push_back(chrom[i]);
+	}
+
+}
+
 
 Zajac::~Zajac()
 {
 	chromosome.clear();
 }
 
-Zwierze * Zajac::born(vector<int> mamsPart, vector <int> dadsPart)
-{
-	Zwierze * cub = new Zajac;
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu ojca
-	for (int i = 0; i < int(this->dadsPart * dadsPart.size()); i++)
-	{
-		cub->chromosome.push_back(dadsPart[i]);//wpisuje liczby z chromosomu ojca do dziecka
-	}
-	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	for (int i = 0; i <int(this->momsPart * mamsPart.size()); i++)
-	{
-		cub->chromosome.push_back(mamsPart[i]);
-	}
-	cout << "\n" << "nowe chrom size: " << cub->chromosome.size();
-	cub->sex = GENDER(rand() % 1);//losujemy plec
-	return cub;
-}
-
+//TODO sklejanie chromosowmow insertem 
+//TODO zaokraglanie czesci ojca i matki uzywajac ceil(double a);
