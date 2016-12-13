@@ -21,6 +21,7 @@ protected:
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 	GENDER sex;
 public:
+	virtual Zwierze* breed(vector<int> dad, vector<int>mom) = 0;
 	bool isFemale();
 	bool isMale();
 	GENDER getSex();

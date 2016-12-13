@@ -9,6 +9,7 @@ class Kon : public Zwierze
 {
 	friend class Osiol;
 public:
+	Kon *breed(vector<int> dad, vector<int>mom);
 	Kon(vector<int> chrom);
 	Kon(vector<int> dad, vector<int> mom);
 	~Kon();
@@ -21,6 +22,7 @@ class Osiol : public Zwierze
 {
 	friend class Kon;
 public:
+	Osiol* breed(vector<int> dad, vector<int>mom);
 	Osiol(vector<int> chrom);
 	Osiol(vector<int> dad, vector<int> mom);
 	~Osiol();
@@ -34,6 +36,7 @@ class Mul : public Zwierze
 	friend class Osiol;
 	friend class Kon;
 public:
+	Mul* breed(vector<int> dad, vector<int>mom);
 	Mul(vector<int> chrom);
 	Mul(vector<int> dad, vector<int> mom);
 	~Mul();
@@ -44,6 +47,7 @@ public:
 class Jastrzab : public Zwierze
 {
 public:
+	Jastrzab* breed(vector<int> dad, vector<int>mom);
 	Jastrzab(vector<int> chrom);
 	Jastrzab(vector<int> dad, vector<int> mom);
 	~Jastrzab();
@@ -55,6 +59,7 @@ public:
 class Myszolow : public  Zwierze
 {
 public:
+	Myszolow* breed(vector<int> dad, vector<int>mom);
 	Myszolow(vector<int> chrom);
 	Myszolow(vector<int> dad, vector<int> mom);
 	~Myszolow();
@@ -67,6 +72,7 @@ public:
 class Zajac : public Zwierze
 {
 public:
+	Zajac* breed(vector<int> dad, vector<int>mom);
 	Zajac(vector<int> chrom);
 	Zajac(vector<int> dad, vector<int> mom);
 	~Zajac();
@@ -76,6 +82,7 @@ public:
 class Mysz : public Zwierze
 {
 public:
+	Mysz* breed(vector<int> dad, vector<int>mom);
 	Mysz(vector<int> chrom);
 	Mysz(vector<int> dad, vector<int> mom);
 	~Mysz();

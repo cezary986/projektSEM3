@@ -4,34 +4,37 @@
 #include <algorithm>
 #include <vector>
 #include <string>
-
 #include <iostream>
 
-//TODO w kazdej populacji w breed trzeba dodac wprowadzanie zmiennej GENDER do obiektu cub
 
-Populacja::Populacja(string ID) : spieceID(ID)
-{
-}
+Populacja::Populacja(string ID) : spieceID(ID) {}
 
 Populacja::~Populacja()
 {
 	for (auto i = males.begin(); i != males.end(); i++)
 	{
 		delete *i;
-		//males.erase(i);
 	}
 	for (auto i = females.begin(); i != females.end(); i++)
 	{
-
 		delete *i;
-		//females.erase(i);
 	}
+	for (auto i = pairs.begin(); i != pairs.end(); i++)
+	{
+		delete *i;
+	}
+
+	males.clear();
+	females.clear();
+	pairs.clear();
+	malesToBreed.clear();
+	femalesToBreed.clear();
 }
 
 //Funkcja obslugujaca pojedyncze rozmnazanie w populacji
 void Populacja::breed(int k,float r)
 {
-	if (this->breedable = 1)
+	if (this->breedable = true)
 	{
 		this->femalesToBreed = this->females;
 		this->malesToBreed = this->males;
@@ -41,23 +44,21 @@ void Populacja::breed(int k,float r)
 		GENDER gender;
 		if (this->pairs.size() != 0)
 		{
-			//ROZMNAZANIE
+			//ROZMNAZANEI
 			Zwierze * cub;//wskaznik na nowo narodzone zwierze
 			
 			//vector <Pair*>::iterator i = this->pairs.begin();
 			for (auto i = this->pairs.begin(); i != this->pairs.end(); ++i) //for (auto i : this->pairs)//pelta dla kazdego elementu vectora
 			{
-				gender = GENDER(rand() % 2);
-				cub = //tworze nowe zwierze na podstawie chromosomow rodzicow
-				//TODO jednak musi byc breed XD nie ma bata
-				if (gender == MALE)
+				cub = (*i)->female->breed((*i)->male->chromosome, (*i)->female->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
+				if (cub->isMale())
 				{
 					//#############
 					//cout << "Nowe zwierze samiec!\n";
 					//#########
 					this->males.push_back(cub);
 				}
-				if (gender == FEMALE)
+				if (cub->isFemale())
 				{
 					//#############
 					//cout << "Nowe zwierze samica!\n";
@@ -71,9 +72,7 @@ void Populacja::breed(int k,float r)
 	{
 		return;
 	}
-
 	this->pairs.clear();
-
 }
 
 

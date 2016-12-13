@@ -255,6 +255,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 	  (whosEaten->females.size() + whosEaten->males.size() < how_many))
 	{
 	//Nie ma co jesc wszyscy gina
+		delete whosEating;
 		whosEating->females.clear();
 		whosEating->males.clear();
 		return;
@@ -269,6 +270,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 				if (whosEaten->females.size() == 0 && whosEaten->males.size() == 0)
 				{
 					//Nie ma co jesc wszyscy gina
+					delete whosEating;
 					whosEating->females.clear();
 					whosEating->males.clear();
 					return;

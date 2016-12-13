@@ -6,7 +6,6 @@
 #include <fstream>
 #include "getParameters.h"
 #include "Laka.h"
-#include <vld.h>
 
 using namespace std;
 
@@ -46,9 +45,7 @@ int main(int argc, char **argv)
 	ofstream outputFile;
 	
 	Laka * laka = new Laka(k, w, r, mounthNumber);
-
 	laka->CreatePop(inputFile, input);
-
 	laka->Symyluj();
 
 	outputFile.open(output, ios::out);

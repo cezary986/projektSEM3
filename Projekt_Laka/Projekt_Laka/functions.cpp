@@ -12,7 +12,6 @@ void delete_vector_el(vector <Zwierze*> a)
 
 void delete_vector_el(vector <Pair*> a)
 {
-
 	for (auto i = a.begin(); i != a.end(); ++i)
 	{
 		delete *i;

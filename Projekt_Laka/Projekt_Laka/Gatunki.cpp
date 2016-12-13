@@ -21,6 +21,11 @@ Kon::Kon(vector<int> dad, vector<int> mom)
 
 }
 
+Kon* Kon::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Kon(dad, mom));
+}
+
 Kon::Kon(vector<int> chrom)
 {
 	sex = GENDER(rand() % 2);
@@ -56,6 +61,11 @@ Osiol::Osiol(vector<int> dad, vector<int> mom)
 
 }
 
+Osiol* Osiol::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Osiol(dad, mom));
+}
+
 Osiol::Osiol(vector<int> chrom)
 {
 	sex = GENDER(rand() % 2);
@@ -64,7 +74,6 @@ Osiol::Osiol(vector<int> chrom)
 	{
 		chromosome.push_back(chrom[i]);
 	}
-
 }
 
 
@@ -89,7 +98,11 @@ Mul::Mul(vector<int> dad, vector<int> mom)
 		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
 		chromosome.push_back(mom[i]);
 	}
+}
 
+Mul* Mul::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Mul(dad, mom));
 }
 
 Mul::Mul(vector<int> chrom)
@@ -100,7 +113,6 @@ Mul::Mul(vector<int> chrom)
 	{
 		chromosome.push_back(chrom[i]);
 	}
-
 }
 
 
@@ -110,7 +122,6 @@ Mul::~Mul()
 }
 
 
-//TODO tutaj byl glowny blad born nie zwracalo mula tylko this
 
 Jastrzab::Jastrzab(vector<int> dad, vector<int> mom)
 {
@@ -127,7 +138,11 @@ Jastrzab::Jastrzab(vector<int> dad, vector<int> mom)
 		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
 		chromosome.push_back(mom[i]);
 	}
+}
 
+Jastrzab* Jastrzab::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Jastrzab(dad, mom));
 }
 
 Jastrzab::Jastrzab(vector<int> chrom)
@@ -138,7 +153,6 @@ Jastrzab::Jastrzab(vector<int> chrom)
 	{
 		chromosome.push_back(chrom[i]);
 	}
-
 }
 
 
@@ -163,7 +177,11 @@ Myszolow::Myszolow(vector<int> dad, vector<int> mom)
 		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
 		chromosome.push_back(mom[i]);
 	}
+}
 
+Myszolow* Myszolow::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Myszolow(dad, mom));
 }
 
 Myszolow::Myszolow(vector<int> chrom)
@@ -174,10 +192,7 @@ Myszolow::Myszolow(vector<int> chrom)
 	{
 		chromosome.push_back(chrom[i]);
 	}
-
 }
-
-
 Myszolow::~Myszolow()
 {
 	chromosome.clear();
@@ -201,6 +216,11 @@ Mysz::Mysz(vector<int> dad, vector<int> mom)
 
 }
 
+Mysz* Mysz::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Mysz(dad, mom));
+}
+
 Mysz::Mysz(vector<int> chrom)
 {
 	sex = GENDER(rand() % 2);
@@ -217,7 +237,6 @@ Mysz::~Mysz()
 {
 	chromosome.clear();
 }
-
 
 Zajac::Zajac(vector<int> dad, vector<int> mom)
 {
@@ -248,6 +267,10 @@ Zajac::Zajac(vector<int> chrom)
 
 }
 
+Zajac* Zajac::breed(vector<int> dad, vector<int> mom)
+{
+	return (new Zajac(dad, mom));
+}
 
 Zajac::~Zajac()
 {
@@ -255,4 +278,3 @@ Zajac::~Zajac()
 }
 
 //TODO sklejanie chromosowmow insertem 
-//TODO zaokraglanie czesci ojca i matki uzywajac ceil(double a);
