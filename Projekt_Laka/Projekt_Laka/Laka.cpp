@@ -224,17 +224,17 @@ void Laka::Symyluj()
 		this->feed(this->Jastrzebie, this->Zajace, JASTRZAB_FOOD);
 //Krzyzowanie sie
 		this->crossBreed(this->Konie, this->Osly, MUL);
+		//#############
+		cout << "STAN LAKI:\n";
+		cout << "Konie - " << this->Konie->sizeOfPopulation() << endl;
+		cout << "Osly - " << this->Osly->sizeOfPopulation() << endl;
+		cout << "Muly - " << this->Muly->sizeOfPopulation() << endl;
+		cout << "Jastrzebie - " << this->Jastrzebie->sizeOfPopulation() << endl;
+		cout << "Myszolowy - " << this->Myszolowy->sizeOfPopulation() << endl;
+		cout << "Myszy - " << this->Myszy->sizeOfPopulation() << endl;
+		cout << "Zajace - " << this->Zajace->sizeOfPopulation() << "\n\n";
+		//#########
 	}
-	//#############
-	cout << "STAN LAKI:\n";
-	cout << "Konie - " << this->Konie->sizeOfPopulation() << endl;
-	cout << "Osly - " << this->Osly->sizeOfPopulation() << endl;
-	cout << "Muly - " << this->Muly->sizeOfPopulation() << endl;
-	cout << "Jastrzebie - " << this->Jastrzebie->sizeOfPopulation() << endl;
-	cout << "Myszolowy - " << this->Myszolowy->sizeOfPopulation() << endl;
-	cout << "Myszy - " << this->Myszy->sizeOfPopulation() << endl;
-	cout << "Zajace - " << this->Zajace->sizeOfPopulation() << endl;
-	//#########
 }
 
 void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
@@ -249,8 +249,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 		//Nie ma kto jesc koncze
 		return;
 	}
-	if ((whosEaten->sizeOfFemalesVec() == 0 && whosEaten->sizeOfMalesVec() == 0) ||
-		(whosEaten->sizeOfFemalesVec() + whosEaten->sizeOfMalesVec() < how_many))
+	if (whosEaten->sizeOfPopulation() == 0)
 	{
 		//Nie ma co jesc wszyscy gina
 		whosEaten->slayPopulation();
@@ -260,18 +259,12 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 		int indexFemales = 0;
 		int indexMales = 0;
 		GENDER genderOfEaten;
+		GENDER genderOfEating;
 		int indexOfEaten;
 
 		if (whosEating->sizeOfPopulation() == 0)
 		{
 			//Nie ma kto jesc koncze
-			return;
-		}
-		if (whosEaten->sizeOfPopulation() < how_many)
-		{
-			//Nie ma co jesc wszyscy gina
-			whosEaten->slayPopulation();
-			whosEating->slayPopulation();
 			return;
 		}
 		//Dla kazdej samicy i samce (naprzemian)
@@ -281,7 +274,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 			for (int i = 0; i < how_many; i++)
 			{
 				//sprawdzam czy nie zabraklo jedzenia
-				if (whosEaten->sizeOfFemalesVec() == 0 && whosEaten->sizeOfMalesVec() == 0)
+				if (whosEaten->sizeOfPopulation() == 0)
 				{
 					//Nie ma co jesc wszyscy gina
 					whosEaten->slayPopulation();
@@ -290,6 +283,15 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 				}
 				//losuje plec
 				genderOfEaten = GENDER(rand() % 2);
+				genderOfEating = GENDER(rand() % 2);
+				if (genderOfEating == MALE)
+				{
+					indexMales++;
+				}
+				else
+				{
+					indexFemales++;
+				}
 
 				if (whosEaten->sizeOfMalesVec() == 0)
 				{
@@ -328,8 +330,8 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 	}
 }
 
-
-/*void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
+/*
+void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 {
 	int indexOfFem = 0;
 	int indexOfMale = 0;
@@ -356,7 +358,7 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 		for (int i = 0; i < how_many; i++)
 		{
 //Sprawdzamy czy nie zabraklo pozywania
-			if (whosEaten->sizeOfMalesVec() > 0 && whosEaten->sizeOfFemalesVec() > 0)
+			if (whosEaten->sizeOfPopulation() == 0)
 			{
 				whosEaten->slayPopulation();
 				whosEating->slayPopulation();

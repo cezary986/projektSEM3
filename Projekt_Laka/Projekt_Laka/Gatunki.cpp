@@ -11,9 +11,7 @@ Kon::Kon(vector<int> dad, vector<int> mom)
 	{
 		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
-	cout << "Tyle od ojca " << int(this->dadsPart * dad.size()) << " ";
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
-	cout << "Tyle od matki " << int(this->momsPart * mom.size()) << " \n";
 	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
 		chromosome.push_back(mom[i]);

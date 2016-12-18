@@ -40,10 +40,6 @@ void Populacja::breed(int k,float r)
 	{
 		return;
 	}
-	if (this->pairs.size() == 0)
-	{
-		return;
-	}
 	if (this->breedable = true)
 	{
 		this->femalesToBreed = this->females;
@@ -113,6 +109,7 @@ void Populacja::survive(float w)
 void Populacja::randomPairs(int k,float r)
 {
 	int index;
+	}
 	for (int i = 0; i < k; i++)
 	{
 		//Zabraklo samcow lub samic do losowania
@@ -218,7 +215,8 @@ int Populacja::sizeOfMalesVec()
 
 void Populacja::slayPopulation()//usuwa wszystkich przedstawicieli populacji bez usuwania calego obiektu
 {
-	/*for (auto i = males.begin(); i != males.end(); i++)
+	cout << "Populacja: " << this->spieceID << " wyginala";
+	for (auto i = males.begin(); i != males.end(); i++)
 	{
 		delete *i;
 	}
@@ -235,7 +233,7 @@ void Populacja::slayPopulation()//usuwa wszystkich przedstawicieli populacji bez
 	females.clear();
 	pairs.clear();
 	malesToBreed.clear();
-	femalesToBreed.clear();*/
+	femalesToBreed.clear();
 }
 
 
