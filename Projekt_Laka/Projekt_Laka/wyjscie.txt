@@ -1,0 +1,19 @@
+Kon 71 3 66 46 88 
+Kon 77 76 
+Kon 47 2 65 11 
+Osiol 44 29 96 
+Osiol 85 26 26 38 74 28 
+Osiol 84 25 32 6 85 93 66 59 36 
+Mul 57 14 
+Mul 54 84 38 11 41 65 63 58 
+Jastrzab 1 30 40 87 52 2 
+Jastrzab 19 51 
+Jastrzab 41 73 44 53 3 
+Jastrzab 49 
+Jastrzab 58 26 57 73 69 74 4 80 
+Myszolow 4 51 26 
+Myszolow 97 12 4 56 
+Myszolow 95 43 55 51 55 78 76 25 88 
+Myszolow 64 99 62 45 73 
+Myszolow 98 6 
+Myszolow 38 41 98 54 53 63 85 26 72 

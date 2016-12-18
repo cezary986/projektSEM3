@@ -415,12 +415,12 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 {
 	first->setFemalesToBreedVec(first->getFemalesVec());
-	first->setMalesToBreedVec(first->getMalesVec());
-	second->setFemalesToBreedVec(second->getFemalesVec());
-	second->setMalesToBreedVec(second->getMalesVec());
+	//first->setMalesToBreedVec(first->getMalesVec());
+	//second->setFemalesToBreedVec(second->getFemalesVec());
+	//second->setMalesToBreedVec(second->getMalesVec());
 	
-	first->randomPairs(this->k, this->r);
-	second->randomPairs(this->k, this->r);
+	//first->randomPairs(this->k, this->r);
+	//second->randomPairs(this->k, this->r);
 
 	Zwierze * male;
 	Zwierze * female;
@@ -430,19 +430,15 @@ void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 	switch (int(childType))
 	{
 	case int(MUL) :
-		if (first->sizeOfMalesToBreedVec() < second->sizeOfFemalesToBreedVec())
+		if (first->sizeOfMalesToBreedVec() <= second->sizeOfFemalesToBreedVec())
 		{
 			for (int i = 0; i < first->sizeOfMalesToBreedVec(); i++)//dla kazdego samca z pierwszego gatunku
 			{
 				/*Jest szansa ze samcow jednego gatunku bedzie mniej niz samic drugiego i vice versa stad femalesToBreed[i] moze wyjsc poza zakres
 				*/
-				if (i >= second->sizeOfFemalesToBreedVec())
-				{
-					break;
-				}
 				female = (second->getFemalesToBreedVec())[i];//dobieram samice z drugiego
 				male = (first->getMalesToBreedVec())[i];
-				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
+				Zwierze * cub = new Mul(male->getChrom(), female->getChrom());
 				if (cub->isMale())
 				{
 					this->Muly->addMale(cub);
@@ -461,8 +457,8 @@ void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 				{
 					break;
 				}
-				female = first->getFemalesToBreedVec()[i];//dobieram samice z drugiego
-				male = second->getMalesToBreedVec()[i];
+				female = (first->getFemalesToBreedVec())[i];//dobieram samice z drugiego
+				male = (second->getMalesToBreedVec())[i];
 				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
 				if (cub->isMale())
 				{

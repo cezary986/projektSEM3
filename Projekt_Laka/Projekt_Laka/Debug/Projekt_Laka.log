@@ -1,15 +1,4 @@
-﻿  Populacja.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(54): warning C4101: 'gender': unreferenced local variable
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(90): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\populacja.cpp(100): warning C4018: '<': signed/unsigned mismatch
-  Gatunki.cpp
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(73): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(112): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(153): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(192): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(229): warning C4018: '<': signed/unsigned mismatch
-c:\users\cezary\documents\programowanie\c++obiekt\projektsem3.git\projekt_laka\projekt_laka\gatunki.cpp(264): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.exe
-  Projekt_Laka.vcxproj -> C:\Users\Cezary\Documents\Programowanie\C++OBIEKT\projektSEM3.git\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)
+﻿  main.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\main.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\Debug\Projekt_Laka.exe
+  Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)
