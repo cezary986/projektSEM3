@@ -3,9 +3,6 @@
 
 using namespace std;
 
-#define maxstring 8
-#define spiecesNumber 7
-
 //Czestotliwosci rozmnazania sie zwierzat wyrazone w miesiacach
 #define KONIE_F 12
 #define OSLY_F 12
@@ -18,8 +15,8 @@ using namespace std;
 #define MYSZOLOW_FOOD 5
 #define JASTRZAB_FOOD 2
 //Czesci chromosow dla gatunkow;
-#define KON_DAD_PART 0.5
-#define KON_MOM_PART 0.5
+#define KON_DAD_PART 0.5//<-- czeec chromosomu pobierana od ojca
+#define KON_MOM_PART 0.5//<-- czesc chromosomu pobierana od matki
 
 #define OSIOL_DAD_PART 0.33333
 #define OSIOL_MOM_PART 0.66666
@@ -39,10 +36,8 @@ using namespace std;
 #define ZAJAC_DAD_PART 1
 #define ZAJAC_MOM_PART 0.33333
 
+#define PARAMSNUMBER 6//liczba parametrow
 
-
-#define PARAMSNUMBER 6
-
-enum ANIMALS { KON, OSIOL, MUL, JASTRZAB, MYSZOLOW, MYSZ, ZAJAC };
+enum ANIMALS { KON, OSIOL, MUL, JASTRZAB, MYSZOLOW, MYSZ, ZAJAC };//enum na rodzaje gatunkow
 
 #endif // DEKLARACJE_H_INCLUDED

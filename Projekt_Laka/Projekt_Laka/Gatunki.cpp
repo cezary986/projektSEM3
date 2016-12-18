@@ -138,6 +138,7 @@ Jastrzab::Jastrzab(vector<int> dad, vector<int> mom)
 		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
 		chromosome.push_back(mom[i]);
 	}
+	cout<<chromosome.size();
 }
 
 Jastrzab* Jastrzab::breed(vector<int> dad, vector<int> mom)

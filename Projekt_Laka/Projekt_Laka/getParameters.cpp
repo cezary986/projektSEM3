@@ -1,9 +1,8 @@
 ﻿#include "getParameters.h"
-#include <iostream>
 
 using namespace std;
 
-void error(ErrorTypes a)
+void ParamsChecking::ExceptionHandling(ExceptionTypes a)
 {
 	switch (int(a))
 	{
@@ -28,64 +27,78 @@ void error(ErrorTypes a)
 	}
 }
 
-void getParameters(int arg, char **tab, string &input, string &output, float &w, int &monthNumber, int &k, float &r)
+
+bool ParamsChecking::getParameters(int arg, char **tab, string &input, string &output, float &w, int &monthNumber, int &k, float &r)
 {
 	int guard = 0;
 	string Switches[2 * PARAMSNUMBER] = { "-i", "-o", "-w","-r","-t","-k" };
-
-//Sprawdzenie liczby przelacznikow
-	if (arg != 2 * PARAMSNUMBER + 1)
+	try
 	{
-		error(NUMBER);
-		return;
-	}
-//Sprawdzam czy nie ma na ostatnim przelacznika
-	for (int i = 0; i < PARAMSNUMBER; ++i)
-	{
-		if (tab[2 * PARAMSNUMBER] == Switches[i])
+		//Sprawdzenie liczby przelacznikow
+		if (arg != 2 * PARAMSNUMBER + 1)
 		{
-			error(UNDEF);
-			return;
+			throw NUMBER;
 		}
-	}
-//Przelacznik znaleziony 
-	for (int i = 1; i < arg; ++i)
-	{
-		for (int j = 0; j < PARAMSNUMBER; ++j)
+		//Sprawdzam czy nie ma na ostatnim przelacznika
+		for (int i = 0; i < PARAMSNUMBER; ++i)
 		{
-			if (tab[i] == Switches[j])
+			if (tab[2 * PARAMSNUMBER] == Switches[i])
 			{
-				Switches[j + PARAMSNUMBER] = tab[i + 1];
-				++guard;
-				break;
+				throw UNDEF;
 			}
 		}
-	}
-//Sprawdzam czy sa wszystkie przalczniki
-	if (guard != PARAMSNUMBER)
-	{
-		error(NUMBER);
-		return;
-	}
-//Sprawdzam czy podano wszsytkie parametry
-	for (int i = 0; i < PARAMSNUMBER; ++i)
-	{
-		for (int j = PARAMSNUMBER; j < 2 * PARAMSNUMBER; ++j)
+		//Przelacznik znaleziony 
+		for (int i = 1; i < arg; ++i)
 		{
-			if (Switches[i] == Switches[j])
+			for (int j = 0; j < PARAMSNUMBER; ++j)
 			{
-				error(UNDEF);
-				return;
+				if (tab[i] == Switches[j])
+				{
+					Switches[j + PARAMSNUMBER] = tab[i + 1];
+					++guard;
+					break;
+				}
 			}
 		}
-	}
+		//Sprawdzam czy sa wszystkie przalczniki
+		if (guard != PARAMSNUMBER)
+		{
+			throw NUMBER;
+		}
+		//Sprawdzam czy podano wszsytkie parametry
+		for (int i = 0; i < PARAMSNUMBER; ++i)
+		{
+			for (int j = PARAMSNUMBER; j < 2 * PARAMSNUMBER; ++j)
+			{
+				if (Switches[i] == Switches[j])
+				{
+					throw UNDEF;
+				}
+			}
+		}
 
-	input = Switches[6];
-	output = Switches[7];
-	//zmiana z string na float
-	w = stof(Switches[8]);
-	r= stof(Switches[9]);
-	monthNumber = stoi(Switches[10]);
-	k = stoi(Switches[11]);
+		input = Switches[6];
+		output = Switches[7];
+		//zmiana z string na float
+		w = stof(Switches[8]);
+		r = stof(Switches[9]);
+		monthNumber = stoi(Switches[10]);
+		k = stoi(Switches[11]);
+
+		if (w < 0 || w > 1)
+		{
+			throw W;
+		}
+		if (r < 0 || r > 1)
+		{
+			throw W;
+		}
+		return true;
+	}
+	catch (ExceptionTypes a)
+	{
+		ExceptionHandling(a);
+		return false;
+	}
 }
 

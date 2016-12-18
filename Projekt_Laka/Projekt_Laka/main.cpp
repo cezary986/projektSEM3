@@ -1,11 +1,10 @@
 ﻿#include <iostream>
-#include <stdio.h>
 #include <string>
 #include <ctime>
-#include <cstdlib>
 #include <fstream>
 #include "getParameters.h"
 #include "Laka.h"
+#include <vld.h>
 
 using namespace std;
 
@@ -38,21 +37,29 @@ int main(int argc, char **argv)
 	string input, output;
 	int mounthNumber, k;
 	float w, r;
-	//funkcja dla sprawdzenia i przypisywania parametrom wartosci
-	getParameters(argc, argv,input,output,w,mounthNumber,k,r);
-	
-	ifstream inputFile; 
-	ofstream outputFile;
-	
-	Laka * laka = new Laka(k, w, r, mounthNumber);
-	laka->CreatePop(inputFile, input);
-	laka->Symyluj();
+	//Obiekt tworzony dla sprawdzenia i przypisywania parametrom wartosci
+	ParamsChecking * parameters = new ParamsChecking();
+	if (parameters->getParameters(argc, argv, input, output, w, mounthNumber, k, r))
+	{
+		delete parameters;
 
-	outputFile.open(output, ios::out);
-	outputFile << *laka;
-	outputFile.close();
-	
-	delete laka;
-	return 0;
+		ifstream inputFile;
+		ofstream outputFile;
 
+		Laka * laka = new Laka(k, w, r, mounthNumber);
+		laka->CreatePop(inputFile, input);
+		laka->Symyluj();
+
+		outputFile.open(output, ios::out);
+		outputFile << *laka;
+		outputFile.close();
+
+		delete laka;
+		return 1;
+	}
+	else//sprawdzanie parametrow nie przebieglo pomyslnie
+	{
+		delete parameters;
+		return 0;
+	}
 }

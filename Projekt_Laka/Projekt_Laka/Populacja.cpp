@@ -1,11 +1,4 @@
 #include "Populacja.h"
-#include <ctime>
-#include <cstdlib>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <iostream>
-
 
 Populacja::Populacja(string ID) : spieceID(ID) {}
 
@@ -31,9 +24,26 @@ Populacja::~Populacja()
 	femalesToBreed.clear();
 }
 
+void Populacja::clearPairs()
+{
+	for (auto i = this->pairs.begin(); i != this->pairs.end(); i++)
+	{
+		delete *i;
+	}
+	this->pairs.clear();
+}
+
 //Funkcja obslugujaca pojedyncze rozmnazanie w populacji
 void Populacja::breed(int k,float r)
 {
+	if (this->sizeOfPopulation() == 0)
+	{
+		return;
+	}
+	if (this->pairs.size() == 0)
+	{
+		return;
+	}
 	if (this->breedable = true)
 	{
 		this->femalesToBreed = this->females;
@@ -47,22 +57,15 @@ void Populacja::breed(int k,float r)
 			//ROZMNAZANEI
 			Zwierze * cub;//wskaznik na nowo narodzone zwierze
 			
-			//vector <Pair*>::iterator i = this->pairs.begin();
-			for (auto i = this->pairs.begin(); i != this->pairs.end(); ++i) //for (auto i : this->pairs)//pelta dla kazdego elementu vectora
+			for (auto i = this->pairs.begin(); i != this->pairs.end(); ++i) //pelta dla kazdego elementu vectora
 			{
-				cub = (*i)->female->breed((*i)->male->chromosome, (*i)->female->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
+					cub = (*i)->female->breed((*i)->male->getChrom(), (*i)->female->getChrom());//tworze nowe zwierze na podstawie chromosomow rodzicow
 				if (cub->isMale())
 				{
-					//#############
-					//cout << "Nowe zwierze samiec!\n";
-					//#########
 					this->males.push_back(cub);
 				}
 				if (cub->isFemale())
 				{
-					//#############
-					//cout << "Nowe zwierze samica!\n";
-					//#########
 					this->females.push_back(cub);
 				}
 			}
@@ -72,13 +75,17 @@ void Populacja::breed(int k,float r)
 	{
 		return;
 	}
-	this->pairs.clear();
+	this->clearPairs();
 }
 
 
 //Sprawdzenie ktorzy z czlownkow populacji przezyja i ewentualne usuniecie ich
 void Populacja::survive(float w)
 {	
+	if (this->sizeOfPopulation() == 0)
+	{
+		return;
+	}
 	//sprawdzam dla samic
 	for(int i = 0; i < this->females.size(); i++)
 	{
@@ -130,6 +137,123 @@ void Populacja::randomPairs(int k,float r)
 				temp->male = this->malesToBreed[index];
 		this->malesToBreed.erase(this->malesToBreed.begin() + index);//usuwam z vectora dostepnych samcow
 		this->pairs.push_back(temp);
+	}
+}
+
+void Populacja::addMale(Zwierze* a)
+{
+	this->males.push_back(a);
+}
+
+void Populacja::addFemale(Zwierze* a)
+{
+	this->females.push_back(a);
+}
+
+int Populacja::sizeOfPopulation()
+{
+	return this->females.size() + this->males.size();
+}
+
+vector<Zwierze*> Populacja::getMalesVec()
+{
+	return (this->males);
+}
+
+vector<Zwierze*> Populacja::getFemalesVec()
+{
+	return (this->females);
+}
+void Populacja::setMalesToBreedVec(vector<Zwierze*> a)
+{
+	this->malesToBreed = a;
+}
+void Populacja::setFemalesToBreedVec(vector<Zwierze*> a)
+{
+	this->femalesToBreed = a;
+}
+
+int  Populacja::sizeOfMalesToBreedVec()
+{
+	return this->malesToBreed.size();
+}
+
+int  Populacja::sizeOfFemalesToBreedVec()
+{
+	return this->femalesToBreed.size();
+}
+
+vector<Zwierze*> Populacja::getMalesToBreedVec()
+{
+	return (this->malesToBreed);
+}
+
+vector<Zwierze*> Populacja::getFemalesToBreedVec()
+{
+	return (this->femalesToBreed);
+}
+
+void Populacja::clearMalesToBreed()
+{
+	this->malesToBreed.clear();
+}
+
+void Populacja::clearFemalesToBreed()
+{
+	this->femalesToBreed.clear();
+
+}
+
+
+int Populacja::sizeOfFemalesVec()
+{
+	return this->females.size();
+}
+
+int Populacja::sizeOfMalesVec()
+{
+	return this->males.size();
+}
+
+void Populacja::slayPopulation()//usuwa wszystkich przedstawicieli populacji bez usuwania calego obiektu
+{
+	/*for (auto i = males.begin(); i != males.end(); i++)
+	{
+		delete *i;
+	}
+	for (auto i = females.begin(); i != females.end(); i++)
+	{
+		delete *i;
+	}
+	for (auto i = pairs.begin(); i != pairs.end(); i++)
+	{
+		delete *i;
+	}
+
+	males.clear();
+	females.clear();
+	pairs.clear();
+	malesToBreed.clear();
+	femalesToBreed.clear();*/
+}
+
+
+void Populacja::SetBreedable(bool a) 
+{
+	this->breedable = a;
+}
+
+void Populacja::eraseAnimal(GENDER gender, int index)
+{
+	if (gender == MALE)
+	{
+		delete this->males[index];
+		this->males.erase(this->males.begin() + index);
+	}
+	if (gender == FEMALE)
+	{
+		delete this->females[index];
+		this->females.erase(this->females.begin() + index);
 	}
 }
 

@@ -4,16 +4,17 @@
 
 #include <fstream>
 #include <string>
-#include "Populacja.h"
-#include <typeinfo>
+#include "Populacja.h"   
+#include <iostream>     
+#include <sstream>//zeby tokenizowac stringi   
 
 class Laka {
+protected:
 	int k;//ile sie losuje
 	float w;//wpolczynnik wymierzania
 	float r;//wspolczynnik rozmanzania
 	int monthsNumber;//liczba miesiecy
 
-protected:
 	Populacja* Konie;
 	Populacja* Osly;
 	Populacja* Muly;

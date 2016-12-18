@@ -4,7 +4,6 @@
 #include "declarations.h"
 #include <vector>
 #include <ctime>
-#include <cstdlib>
 #include <iostream>
 
 
@@ -15,8 +14,6 @@ enum GENDER {MALE, FEMALE};
 
 class Zwierze
 {
-	friend class Populacja;
-	friend class Laka;
 protected:
 	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 	GENDER sex;
@@ -29,6 +26,7 @@ public:
 	vector <int> chromosome;
 	bool checkSurvival(float w);
 	bool checkBreeding(float r);
+	vector<int> getChrom();
 	friend ostream& operator <<(ostream &output, Zwierze const& ex);
 };
 

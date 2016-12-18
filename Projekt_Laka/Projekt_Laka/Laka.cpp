@@ -1,6 +1,3 @@
-#include <string>       
-#include <iostream>     
-#include <sstream>//zeby tokenizowac stringi   
 #include "Laka.h"
 
 
@@ -22,13 +19,13 @@ Laka::Laka(int sk, float sw, float sr, int mn)
 	Zajace = new Populacja("Zajac");
 
 	//1 - moze sie rozmnazac, 0 - nie moze
-	Muly->breedable = 0;
-	Osly->breedable = 1;
-	Konie->breedable = 1;
-	Jastrzebie->breedable = 1;
-	Myszolowy->breedable = 1;
-	Myszy->breedable = 1;
-	Zajace->breedable = 1;
+	Muly->SetBreedable(false);
+	Osly->SetBreedable(true);
+	Konie->SetBreedable(true);
+	Jastrzebie->SetBreedable(true);
+	Myszolowy->SetBreedable(true);
+	Myszy->SetBreedable(true);
+	Zajace->SetBreedable(true);
 }
 
 Laka::~Laka()
@@ -74,11 +71,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Osiol(chrom);
 				if (animal->isMale())
 				{
-					this->Osly->males.push_back(animal);
+					this->Osly->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Osly->females.push_back(animal);
+					this->Osly->addFemale(animal);
 				}
 			}
 			if (gatunek == "Kon")
@@ -86,11 +83,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Kon(chrom);
 				if (animal->isMale())
 				{
-					this->Konie->males.push_back(animal);
+					this->Konie->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Konie->females.push_back(animal);
+					this->Konie->addFemale(animal);
 				}
 			}
 			if (gatunek == "Mul")
@@ -98,11 +95,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Mul(chrom);
 				if (animal->isMale())
 				{
-					this->Muly->males.push_back(animal);
+					this->Muly->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Muly->females.push_back(animal);
+					this->Muly->addFemale(animal);
 				}
 			}
 			if (gatunek == "Jastrzab")
@@ -110,11 +107,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Jastrzab(chrom);
 				if (animal->isMale())
 				{
-					this->Jastrzebie->males.push_back(animal);
+					this->Jastrzebie->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Jastrzebie->females.push_back(animal);
+					this->Jastrzebie->addFemale(animal);
 				}
 			}
 			if (gatunek == "Myszolow")
@@ -122,11 +119,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Myszolow(chrom);
 				if (animal->isMale())
 				{
-					this->Myszolowy->males.push_back(animal);
+					this->Myszolowy->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Myszolowy->females.push_back(animal);
+					this->Myszolowy->addFemale(animal);
 				}
 			}
 			if (gatunek == "Mysz")
@@ -134,11 +131,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Mysz(chrom);
 				if (animal->isMale())
 				{
-					this->Myszy->males.push_back(animal);
+					this->Myszy->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Myszy->females.push_back(animal);
+					this->Myszy->addFemale(animal);
 				}
 			}
 			if (gatunek == "Zajac")
@@ -146,11 +143,11 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 				animal = new Zajac(chrom);
 				if (animal->isMale())
 				{
-					this->Zajace->males.push_back(animal);
+					this->Zajace->addMale(animal);
 				}
 				if (animal->isFemale())
 				{
-					this->Zajace->females.push_back(animal);
+					this->Zajace->addFemale(animal);
 				}
 			}
 			line.empty();
@@ -160,13 +157,13 @@ bool Laka::CreatePop(ifstream &sfile, string filename)
 		}
 		//#############
 		cout << "STAN LAKI:\n";
-		cout << "Konie - " << this->Konie->males.size() + this->Konie->females.size() << endl;
-		cout << "Osly - " << this->Osly->males.size() + this->Osly->females.size() << endl;
-		cout << "Muly - " << this->Muly->males.size() + this->Muly->females.size() << endl;
-		cout << "Jastrzebie - " << this->Jastrzebie->males.size() + this->Jastrzebie->females.size() << endl;
-		cout << "Myszolowy - " << this->Myszolowy->males.size() + this->Myszolowy->females.size() << endl;
-		cout << "Myszy - " << this->Myszy->males.size() + this->Myszy->females.size() << endl;
-		cout << "Zajace - " << this->Zajace->males.size() + this->Zajace->females.size() << endl;
+		cout << "Konie - " << this->Konie->sizeOfPopulation() << endl;
+		cout << "Osly - " << this->Osly->sizeOfPopulation() << endl;
+		cout << "Muly - " << this->Muly->sizeOfPopulation() << endl;
+		cout << "Jastrzebie - " << this->Jastrzebie->sizeOfPopulation() << endl;
+		cout << "Myszolowy - " << this->Myszolowy->sizeOfPopulation() << endl;
+		cout << "Myszy - " << this->Myszy->sizeOfPopulation() << endl;
+		cout << "Zajace - " << this->Zajace->sizeOfPopulation() << endl;
 		//#########
 		return 1;
 	}
@@ -222,6 +219,7 @@ void Laka::Symyluj()
 		this->Myszy->survive(this->w);
 		this->Zajace->survive(this->w);
 //Pozywianie sie
+		//cout << *this;
 		this->feed(this->Myszolowy,this->Myszy, MYSZOLOW_FOOD);
 		this->feed(this->Jastrzebie, this->Zajace, JASTRZAB_FOOD);
 //Krzyzowanie sie
@@ -229,95 +227,197 @@ void Laka::Symyluj()
 	}
 	//#############
 	cout << "STAN LAKI:\n";
-	cout << "Konie - " << this->Konie->males.size() + this->Konie->females.size() << endl;
-	cout << "Osly - " << this->Osly->males.size() + this->Osly->females.size() << endl;
-	cout << "Muly - " << this->Muly->males.size() + this->Muly->females.size() << endl;
-	cout << "Jastrzebie - " << this->Jastrzebie->males.size() + this->Jastrzebie->females.size() << endl;
-	cout << "Myszolowy - " << this->Myszolowy->males.size() + this->Myszolowy->females.size() << endl;
-	cout << "Myszy - " << this->Myszy->males.size() + this->Myszy->females.size() << endl;
-	cout << "Zajace - " << this->Zajace->males.size() + this->Zajace->females.size() << endl;
+	cout << "Konie - " << this->Konie->sizeOfPopulation() << endl;
+	cout << "Osly - " << this->Osly->sizeOfPopulation() << endl;
+	cout << "Muly - " << this->Muly->sizeOfPopulation() << endl;
+	cout << "Jastrzebie - " << this->Jastrzebie->sizeOfPopulation() << endl;
+	cout << "Myszolowy - " << this->Myszolowy->sizeOfPopulation() << endl;
+	cout << "Myszy - " << this->Myszy->sizeOfPopulation() << endl;
+	cout << "Zajace - " << this->Zajace->sizeOfPopulation() << endl;
 	//#########
 }
 
 void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 {
-	int indexFemales =0;
-	int indexMales =0;
+	int indexFemales = 0;
+	int indexMales = 0;
 	GENDER genderOfEaten;
 	int indexOfEaten;
 
-	if ((whosEating->females.size() == 0 && whosEating->males.size() == 0))
+	if ((whosEating->sizeOfFemalesVec() == 0 && whosEating->sizeOfMalesVec() == 0))
 	{
-	//Nie ma kto jesc koncze
+		//Nie ma kto jesc koncze
 		return;
 	}
-	if((whosEaten->females.size() == 0 && whosEaten->males.size() ==0) ||
-	  (whosEaten->females.size() + whosEaten->males.size() < how_many))
+	if ((whosEaten->sizeOfFemalesVec() == 0 && whosEaten->sizeOfMalesVec() == 0) ||
+		(whosEaten->sizeOfFemalesVec() + whosEaten->sizeOfMalesVec() < how_many))
 	{
-	//Nie ma co jesc wszyscy gina
-		delete whosEating;
-		whosEating->females.clear();
-		whosEating->males.clear();
+		//Nie ma co jesc wszyscy gina
+		whosEaten->slayPopulation();
+		whosEating->slayPopulation();
 		return;
-	}
-//Dla kazdej samicy i samce (naprzemian)
-		while (indexFemales <= whosEating->females.size() || indexMales <= whosEating->males.size())
+	} {
+		int indexFemales = 0;
+		int indexMales = 0;
+		GENDER genderOfEaten;
+		int indexOfEaten;
+
+		if (whosEating->sizeOfPopulation() == 0)
 		{
-	//Tyle razy ile ma byc zjedzonych zwierzat
+			//Nie ma kto jesc koncze
+			return;
+		}
+		if (whosEaten->sizeOfPopulation() < how_many)
+		{
+			//Nie ma co jesc wszyscy gina
+			whosEaten->slayPopulation();
+			whosEating->slayPopulation();
+			return;
+		}
+		//Dla kazdej samicy i samce (naprzemian)
+		while (indexFemales + indexMales <= whosEating->sizeOfPopulation())
+		{
+			//Tyle razy ile ma byc zjedzonych zwierzat
 			for (int i = 0; i < how_many; i++)
-			{	
+			{
 				//sprawdzam czy nie zabraklo jedzenia
-				if (whosEaten->females.size() == 0 && whosEaten->males.size() == 0)
+				if (whosEaten->sizeOfFemalesVec() == 0 && whosEaten->sizeOfMalesVec() == 0)
 				{
 					//Nie ma co jesc wszyscy gina
-					delete whosEating;
-					whosEating->females.clear();
-					whosEating->males.clear();
+					whosEaten->slayPopulation();
+					whosEating->slayPopulation();
 					return;
 				}
 				//losuje plec
 				genderOfEaten = GENDER(rand() % 2);
 
-				if (whosEaten->males.size() == 0)
+				if (whosEaten->sizeOfMalesVec() == 0)
 				{
 					genderOfEaten = FEMALE;
 				}
-				if (whosEaten->females.size() != 0)
+				if (whosEaten->sizeOfFemalesVec() == 0)
 				{
 					genderOfEaten = MALE;
 				}
-				if (whosEaten->males.size() == 0)
+				if (whosEaten->sizeOfMalesVec() != 0)
 				{
 					if (genderOfEaten == MALE)
 					{	//losuje samca do zjedzenia
-						indexOfEaten = rand() % whosEaten->males.size();
+						indexOfEaten = rand() % whosEaten->sizeOfMalesVec();
 						//usuwam zjedzonego
-						 delete whosEaten->males[indexOfEaten];
-						whosEaten->males.erase(whosEaten->males.begin() + indexOfEaten);
+						//delete whosEaten->getMalesVec()[whosEaten->sizeOfMalesVec()];
+						//whosEaten->getMalesVec().pop_back();
+						whosEaten->eraseAnimal(genderOfEaten, indexOfEaten);
 					}
 				}
-				if (whosEaten->females.size() != 0)
+				if (whosEaten->sizeOfFemalesVec() != 0)
 				{
 					if (genderOfEaten == FEMALE)
 					{	//losuje samice do zjedzenia
-						indexOfEaten = rand() % whosEaten->females.size();
+						indexOfEaten = rand() % whosEaten->sizeOfFemalesVec();
 						//usuwam zjedzonego
-						delete whosEaten->females[indexOfEaten];
-						whosEaten->females.erase(whosEaten->females.begin() + indexOfEaten);
+						//delete whosEaten->getFemalesVec()[whosEaten->sizeOfFemalesVec()];
+						//whosEaten->getFemalesVec().pop_back();
+						whosEaten->eraseAnimal(genderOfEaten, indexOfEaten);
 					}
 				}
 			}
-				indexFemales++;
-				indexMales++;
+			indexFemales++;
+			indexMales++;
 		}
+	}
 }
+
+
+/*void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
+{
+	int indexOfFem = 0;
+	int indexOfMale = 0;
+	GENDER genderOfEaten;
+	GENDER genderOfEating;
+	int indexOfEaten;
+
+	if (whosEating->sizeOfPopulation() == 0)
+	{
+//Nie ma kto jesc koncze
+		return;
+	}
+	if (whosEaten->sizeOfPopulation() < how_many)
+	{
+//Nie ma co jesc wszyscy gina
+		whosEaten->slayPopulation();
+		whosEating->slayPopulation();
+		return;
+	}
+//Dla kazdego z drapiznikow
+	while ((whosEating->sizeOfFemalesVec() + whosEating->sizeOfMalesVec())  <= whosEating->sizeOfPopulation())
+	{
+		//Tyle razy ile ma byc zjedzonych zwierzat
+		for (int i = 0; i < how_many; i++)
+		{
+//Sprawdzamy czy nie zabraklo pozywania
+			if (whosEaten->sizeOfMalesVec() > 0 && whosEaten->sizeOfFemalesVec() > 0)
+			{
+				whosEaten->slayPopulation();
+				whosEating->slayPopulation();
+				return;
+			}
+//Losuje plec tego kto ma byc zjedzony
+			genderOfEaten = GENDER(rand() % 2);
+//Jesli nie ma samcow zjadane sa samice
+			if (whosEaten->getMalesVec().size() == 0)
+			{
+				genderOfEaten = FEMALE;
+			}
+//Jesli nie ma samic znajadane sa samce
+			if (whosEaten->getFemalesVec().size() == 0)
+			{
+				genderOfEaten = MALE;
+			}
+//Losuje plec drapieznika
+			genderOfEating = GENDER(rand() % 2);
+//Jesli nie ma samcow drapieznik to samica
+			if (whosEating->getMalesVec().size() == 0 || indexOfMale >= whosEating->sizeOfMalesVec())
+			{
+				genderOfEating = FEMALE;
+			}
+//Jesli nie ma samic drapieznik jest samcem
+			if (whosEating->getFemalesVec().size() == 0 || indexOfFem >= whosEating->sizeOfFemalesVec())
+			{
+				genderOfEating = MALE;
+			}
+			if (genderOfEating == MALE)
+			{
+				indexOfMale++;
+			}
+			if (genderOfEating == FEMALE)
+			{
+				indexOfFem++;
+			}
+//Zjedzony jest samcem usuwam go z populacji
+			if (genderOfEaten == MALE)
+			{
+				delete 	&(whosEaten->getMalesVec().end());
+				whosEaten->getMalesVec().pop_back();
+			}
+//Zjedzony jest samica usuwam go z populacji
+			if (genderOfEaten == MALE)
+			{
+				delete 	&(whosEaten->getFemalesVec().end());
+				whosEaten->getFemalesVec().pop_back();
+			}
+		}
+		whosEating++;
+	}
+}
+*/
 
 void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 {
-	first->femalesToBreed = first->females;
-	first->malesToBreed = first->males;
-	second->femalesToBreed = second->females;
-	second->malesToBreed = second->males;
+	first->setFemalesToBreedVec(first->getFemalesVec());
+	first->setMalesToBreedVec(first->getMalesVec());
+	second->setFemalesToBreedVec(second->getFemalesVec());
+	second->setMalesToBreedVec(second->getMalesVec());
 	
 	first->randomPairs(this->k, this->r);
 	second->randomPairs(this->k, this->r);
@@ -330,58 +430,56 @@ void Laka::crossBreed(Populacja *first, Populacja* second, ANIMALS childType)
 	switch (int(childType))
 	{
 	case int(MUL) :
-		if (first->malesToBreed.size() < second->femalesToBreed.size())
+		if (first->sizeOfMalesToBreedVec() < second->sizeOfFemalesToBreedVec())
 		{
-			for (int i = 0; i < first->malesToBreed.size(); i++)//dla kazdego samca z pierwszego gatunku
+			for (int i = 0; i < first->sizeOfMalesToBreedVec(); i++)//dla kazdego samca z pierwszego gatunku
 			{
 				/*Jest szansa ze samcow jednego gatunku bedzie mniej niz samic drugiego i vice versa stad femalesToBreed[i] moze wyjsc poza zakres
 				*/
-				if (i >= second->femalesToBreed.size())
+				if (i >= second->sizeOfFemalesToBreedVec())
 				{
 					break;
 				}
-				female = second->femalesToBreed[i];//dobieram samice z drugiego
-				male = first->males[i];
+				female = (second->getFemalesToBreedVec())[i];//dobieram samice z drugiego
+				male = (first->getMalesToBreedVec())[i];
 				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
 				if (cub->isMale())
 				{
-					this->Muly->males.push_back(cub);
+					this->Muly->addMale(cub);
 				}
 				if(cub->isFemale())
 				{
-					this->Muly->females.push_back(cub);
+					this->Muly->addFemale(cub);
 				}
 			}
 		}
 		else
 		{
-
-			for (int i = 0; i < second->malesToBreed.size(); i++)//dla kazdego samca z pierwszego gatunku
+			for (int i = 0; i < (second->sizeOfMalesToBreedVec()); i++)//dla kazdego samca z pierwszego gatunku
 			{
-				if (i >= first->femalesToBreed.size())
+				if (i >= first->sizeOfFemalesToBreedVec())
 				{
 					break;
 				}
-				female = first->femalesToBreed[i];//dobieram samice z drugiego
-				male = second->males[i];
+				female = first->getFemalesToBreedVec()[i];//dobieram samice z drugiego
+				male = second->getMalesToBreedVec()[i];
 				Zwierze * cub = new Mul(male->chromosome, female->chromosome);
 				if (cub->isMale())
 				{
-					this->Muly->males.push_back(cub);
+					this->Muly->addMale(cub);
 				}
 				if (cub->isFemale())
 				{
-					this->Muly->females.push_back(cub);
+					this->Muly->addFemale(cub);
 				}
 			}
 		}
-
 		break;
 	}
-	first->malesToBreed.clear();
-	first->femalesToBreed.clear();
-	second->malesToBreed.clear();
-	second->femalesToBreed.clear();
+	first->clearMalesToBreed();
+	first->clearFemalesToBreed();
+	second->clearMalesToBreed();
+	second->clearFemalesToBreed();
 }
 
 

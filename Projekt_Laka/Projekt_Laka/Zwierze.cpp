@@ -47,10 +47,13 @@ bool Zwierze::isMale()
 		return true;
 	else
 		return false;
-
 }
 GENDER Zwierze::getSex()
 {
 	return this->sex;
 }
 
+vector<int> Zwierze::getChrom()
+{
+	return this->chromosome;
+}
