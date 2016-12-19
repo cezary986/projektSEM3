@@ -8,7 +8,7 @@
 
 class Populacja
 {
-protected:
+private:
 	vector <Zwierze*> males;
 	vector <Zwierze*> females;
 	//Wektory z ktorych bede losowal pary do rozmnazania 

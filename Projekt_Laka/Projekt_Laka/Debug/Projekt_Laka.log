@@ -1,3 +1,23 @@
 ﻿  Zwierze.cpp
+  Populacja.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\populacja.cpp(50): warning C4101: 'gender': unreferenced local variable
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\populacja.cpp(87): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\populacja.cpp(97): warning C4018: '<': signed/unsigned mismatch
+  getParameters.cpp
+  main.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\main.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Laka.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\laka.cpp(244): warning C4101: 'vectorWhosEaten': unreferenced local variable
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\laka.cpp(247): warning C4101: 'indexOfEaten': unreferenced local variable
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\laka.cpp(243): warning C4101: 'vectorWhosEating': unreferenced local variable
+  Gatunki.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(31): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(110): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(149): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(188): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(225): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\gatunki.cpp(260): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\Debug\Projekt_Laka.exe
   Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\Debug\Projekt_Laka.pdb (Partial PDB)

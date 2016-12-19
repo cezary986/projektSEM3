@@ -56,7 +56,7 @@ void Populacja::breed(int k,float r)
 			for (auto i = this->pairs.begin(); i != this->pairs.end(); ++i) //pelta dla kazdego elementu vectora
 			{
 			
-					cub = (*i)->female->breed((*i)->male->chromosome, (*i)->female->chromosome);//tworze nowe zwierze na podstawie chromosomow rodzicow
+					cub = (*i)->female->breed((*i)->male->getChrom(), (*i)->female->getChrom());//tworze nowe zwierze na podstawie chromosomow rodzicow
 					if (cub->isMale())
 					{
 						this->males.push_back(cub);

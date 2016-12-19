@@ -9,7 +9,7 @@
 #include <sstream>//zeby tokenizowac stringi   
 
 class Laka {
-protected:
+private:
 	int k;//ile sie losuje
 	float w;//wpolczynnik wymierzania
 	float r;//wspolczynnik rozmanzania

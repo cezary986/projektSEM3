@@ -33,7 +33,7 @@ using namespace std;
 #define MYSZ_DAD_PART 0.5
 #define MYSZ_MOM_PART 0.5
 
-#define ZAJAC_DAD_PART 1
+#define ZAJAC_DAD_PART 0.63
 #define ZAJAC_MOM_PART 0.33333
 
 #define PARAMSNUMBER 6//liczba parametrow

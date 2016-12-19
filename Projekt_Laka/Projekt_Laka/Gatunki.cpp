@@ -127,16 +127,14 @@ Jastrzab::Jastrzab(vector<int> dad, vector<int> mom)
 
 	for (int i = 0; i < ceil(this->dadsPart * dad.size()); i++)
 	{
-		//cout <<"Tyle od ojca" << int(this->dadsPart * dadsPart.size()) << " ";
 		chromosome.push_back(dad[i]);//wpisuje liczby z chromosomu ojca do dziecka
 	}
 	//warunek krancowy to liczba liczb ktore beda pochodzic z chromosomu matki
 	for (int i = 0; i < ceil(this->momsPart * mom.size()); i++)
 	{
-		//cout <<"Tyle od matki" <<int(this->momsPart * mamsPart.size()) << " ";
 		chromosome.push_back(mom[i]);
 	}
-	cout<<chromosome.size();
+
 }
 
 Jastrzab* Jastrzab::breed(vector<int> dad, vector<int> mom)

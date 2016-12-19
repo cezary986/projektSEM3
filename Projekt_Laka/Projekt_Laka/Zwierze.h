@@ -15,15 +15,14 @@ enum GENDER {MALE, FEMALE};
 class Zwierze
 {
 protected:
-	int chromSize = size(chromosome);//zeby nie wywolywac za czesto
 	GENDER sex;
+	vector <int> chromosome;
 public:
 	virtual Zwierze* breed(vector<int> dad, vector<int>mom) = 0;
 	bool isFemale();
 	bool isMale();
 	GENDER getSex();
 	virtual ~Zwierze() = 0;
-	vector <int> chromosome;
 	bool checkSurvival(float w);
 	bool checkBreeding(float r);
 	vector<int> getChrom();

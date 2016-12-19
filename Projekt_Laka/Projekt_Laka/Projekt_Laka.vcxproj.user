@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>-i dane.txt -o wyjscie.txt -w 0.01 -r 0.9 -t 60 -k 20</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-i dane.txt -o wyjscie.txt -w 0.01 -r 0.9 -t 200 -k 8</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
