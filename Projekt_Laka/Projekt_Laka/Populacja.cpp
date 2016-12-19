@@ -109,7 +109,6 @@ void Populacja::survive(float w)
 void Populacja::randomPairs(int k,float r)
 {
 	int index;
-	}
 	for (int i = 0; i < k; i++)
 	{
 		//Zabraklo samcow lub samic do losowania

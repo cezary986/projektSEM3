@@ -236,7 +236,8 @@ void Laka::Symyluj()
 		//#########
 	}
 }
-
+/*
+//Dzialajacy feed
 void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 {
 	int indexFemales = 0;
@@ -329,7 +330,68 @@ void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 		}
 	}
 }
-
+*/
+void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
+{
+	int indexFemales = 0;
+	int indexMales = 0;
+	vector <Zwierze*> * vectorWhosEating;
+	vector <Zwierze*> * vectorWhosEaten;
+	GENDER genderOfEaten;
+	GENDER genderOfEating;
+	int indexOfEaten;
+//Nie ma kto jesc koncze
+	if (whosEating->sizeOfPopulation() == 0)
+	{
+		return;
+	}
+//Za malo pozywienia, jedza to co jest i umieraja z glodu
+	if (whosEaten->sizeOfPopulation() < how_many)
+	{
+		whosEaten->slayPopulation();
+		whosEating->slayPopulation();
+		return;
+	}
+//Dla kazdego z jedzacych
+	while(indexFemales + indexMales >=  whosEating->sizeOfPopulation())
+	{
+		genderOfEating = GENDER(rand() % 2);
+		//losuje zwierzeta do zjedzenia
+		for (int i = 0; i < how_many; i++)
+		{
+//Brakuje pozywienia
+			if (whosEaten->sizeOfPopulation() < how_many)
+			{
+				for (int j = indexFemales; j < whosEating->sizeOfFemalesVec(); j++)
+				{
+					whosEating->getFemalesVec().erase(whosEating->getFemalesVec().begin() + indexFemales);
+				}
+				for (int j = indexMales; j < whosEating->sizeOfMalesVec(); j++)
+				{
+					whosEating->getMalesVec().erase(whosEating->getMalesVec().begin() + indexMales);
+				}
+				return;
+			}
+			genderOfEaten = GENDER(rand() % 2);
+			if (genderOfEaten == MALE)
+			{
+				whosEaten->getMalesVec().erase(whosEaten->getFemalesToBreedVec().end());
+			}
+			if (genderOfEaten == FEMALE)
+			{
+				whosEaten->getMalesVec().erase(whosEaten->getFemalesToBreedVec().end());
+			}
+		}
+		if (genderOfEating == MALE)
+		{
+			indexMales++;
+		}
+		if (genderOfEating == FEMALE)
+		{
+			indexFemales++;
+		}
+	}
+}
 /*
 void Laka::feed(Populacja * whosEating, Populacja *whosEaten, int how_many)
 {

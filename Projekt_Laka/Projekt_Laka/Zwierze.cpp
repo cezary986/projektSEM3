@@ -1,13 +1,13 @@
 #include "Zwierze.h"
 
-#define randmax 10
+#define randmax 100
 
 Zwierze::~Zwierze(){}
 
 
 bool Zwierze::checkSurvival(float w)
 {
-	float f = float(rand() % randmax)/10;//dzielenie zeby uzyskac liczbe [0,1]
+	float f = float(rand() % randmax)/100;//dzielenie zeby uzyskac liczbe [0,1]
 	//Cialo funkcji dopadowania przyjmijmy ze to rand()
 	if (f < w)
 		return false;//ginie
