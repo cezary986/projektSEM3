@@ -7,7 +7,7 @@ using namespace std;
 
 class Kon : public Zwierze
 {
-	friend class Osiol;
+	//friend class Osiol;
 public:
 	Kon *breed(vector<int> dad, vector<int>mom);
 	Kon(vector<int> chrom);
@@ -20,7 +20,7 @@ public:
 
 class Osiol : public Zwierze
 {
-	friend class Kon;
+	//friend class Kon;
 public:
 	Osiol* breed(vector<int> dad, vector<int>mom);
 	Osiol(vector<int> chrom);
@@ -28,13 +28,12 @@ public:
 	~Osiol();
 	static double momsPart;//ile chromosomu bierze od matki
 	static double dadsPart;
-	//Mul* operator +(const Kon*);
 };
 
 class Mul : public Zwierze
 {
-	friend class Osiol;
-	friend class Kon;
+	//friend class Osiol;
+	//friend class Kon;
 public:
 	Mul* breed(vector<int> dad, vector<int>mom);
 	Mul(vector<int> chrom);

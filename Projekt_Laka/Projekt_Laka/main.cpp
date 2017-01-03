@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 
 		delete laka;
 		return 1;
-	}
+	} 
 	else//sprawdzanie parametrow nie przebieglo pomyslnie
 	{
 		delete parameters;

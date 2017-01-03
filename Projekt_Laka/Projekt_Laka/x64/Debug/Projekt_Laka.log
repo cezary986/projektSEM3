@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\admin\documents\visual studio 2015\projects\projektsem3\projekt_laka\projekt_laka\main.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\x64\Debug\Projekt_Laka.exe
+  Projekt_Laka.vcxproj -> C:\Users\Admin\Documents\Visual Studio 2015\Projects\projektSEM3\Projekt_Laka\x64\Debug\Projekt_Laka.pdb (Partial PDB)
